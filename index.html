@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.pygmy {
+				height: 500px;
+				width: 500px;
+			}
+		</style>
+	</head>
+	<body>
+		<main id="app"></main>
+		<script>
+			const app = document.getElementById('app');
+			const frag = document.createDocumentFragment();
+			for (let i = 0; i < 250; i += 1) {
+				const img = document.createElement('img');
+				img.dataset.src = `https://placehold.it/500x500/?text=${i}`;
+				img.classList.add('pygmy');
+				img.setAttribute('height', 500);
+				img.setAttribute('width', 500);
+				frag.appendChild(img);
+			}
+			app.appendChild(frag);
+		</script>
+		<script src="dist/index.js"></script>
+		<script></script>
+	</body>
+</html>

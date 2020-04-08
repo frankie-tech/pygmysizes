@@ -9,7 +9,7 @@ pygmysizes (named after the pygmy sloth) is not meant to be a full replacement o
 ## Goals
 
 - self initializing
-- standard compliant
+- standards compliant
 - 60fps/jank free
 - no impact to SEO
 - use modern code

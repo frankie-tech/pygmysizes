@@ -1,14 +1,17 @@
 {
-  "name": "lazyloadimg",
-  "version": "0.0.1",
-  "description": "lightweight lazyloading option",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "microbundle": "^0.11.0"
-  }
+	"name": "pygmysizes",
+	"version": "0.0.1",
+	"description": "lightweight lazyloading option",
+	"source": "src/index.js",
+	"main": "dist/index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "microbundle watch -f iife --compress=false",
+		"build": "microbundle -f iife"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"microbundle": "^0.11.0"
+	}
 }
