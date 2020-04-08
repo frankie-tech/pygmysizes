@@ -7,7 +7,7 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"dev": "microbundle watch -f iife --compress=false",
-		"build": "microbundle -f iife"
+		"build": "microbundle -f iife --terser"
 	},
 	"author": "",
 	"license": "ISC",

@@ -4,9 +4,10 @@ import { testLoading } from './test';
  * @typedef {import('..').pygmyCfg} pygmyCfg
  * @typedef {import('..').pygmyStates} pygmyStates
  * @typedef {import('..').pygmyAttributes} pygmyAttributes
- * @typedef {import('..').internal} _
+ * @typedef {import('..').internal} internal
  * @typedef {import('..').utils} utils
  */
+/** @type {utils} */
 import utils from './utils';
 
 /**
@@ -22,7 +23,28 @@ import utils from './utils';
 var pygmysizes;
 !(function () {
 	'use strict';
-	const _ = Object.assign({}, utils);
+	/** @type {internal} */
+	const _ = {
+		defaults: Object.freeze({
+			selector: '.pygmy', // dom selector string /
+			offset: 100, // offset in pixels where an image should be loaded /,
+			state: {
+				registered: 'data-pygmy',
+				loading: 'data-pygmy-loading',
+				loaded: 'data-pygmy-loaded',
+				fail: 'data-pygmy-failed',
+			},
+			attr: {
+				src: 'data-src',
+				srcset: 'data-srcset',
+			},
+			initOnLoad: true,
+			on: {},
+			dev: false,
+		}),
+	};
+
+	Object.assign({}, utils);
 
 	/** @type {pygmyCfg} */
 	_.defaults = Object.freeze({
@@ -60,14 +82,7 @@ var pygmysizes;
 	};
 	/** @type {pygmyCfg} */
 	_.config = Object.assign(_.config, {}, _.defaults, window['pygmyCfg']);
-	/** @type {pygmyCfg} */
-	/*
-    _.config = window['pygmyCfg'] = Object.assign(
-		{},
-		_.defaults,
-		window['pygmyCfg']
-	);
-    */
+
 	_.elements = [];
 
 	_.loadingSupported = 'loading' in HTMLImageElement;
