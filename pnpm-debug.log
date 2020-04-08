@@ -2,20 +2,4038 @@
   "0 debug pnpm:scope": {
     "selected": 1
   },
-  "1 error pnpm": {
-    "message": {
-      "errno": 1,
-      "code": "ELIFECYCLE",
-      "pkgid": "lazyloadimg@0.0.1",
-      "stage": "dev",
-      "script": "microbundle watch -f modern,es",
-      "pkgname": "lazyloadimg"
+  "1 debug pnpm": {
+    "isCaseSensitive": false,
+    "store": "/Users/gngrchw/.pnpm-store/2"
+  },
+  "2 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "lazyloadimg",
+      "version": "0.0.1",
+      "description": "lightweight lazyloading option",
+      "main": "index.js",
+      "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "author": "",
+      "license": "ISC"
     },
-    "err": {
-      "name": "Error",
-      "message": "lazyloadimg@0.0.1 dev: `microbundle watch -f modern,es`\nExit status 1",
-      "code": "ELIFECYCLE",
-      "stack": "Error: lazyloadimg@0.0.1 dev: `microbundle watch -f modern,es`\nExit status 1\n    at EventEmitter.<anonymous> (/usr/local/lib/node_modules/pnpm/lib/node_modules/@zkochan/npm-lifecycle/index.js:302:16)\n    at EventEmitter.emit (events.js:210:5)\n    at ChildProcess.<anonymous> (/usr/local/lib/node_modules/pnpm/lib/node_modules/@zkochan/npm-lifecycle/lib/spawn.js:55:14)\n    at ChildProcess.emit (events.js:210:5)\n    at maybeClose (internal/child_process.js:1021:16)\n    at Process.ChildProcess._handle.onexit (internal/child_process.js:283:5)"
+    "prefix": "/Users/gngrchw/Code/lazyLoadImg"
+  },
+  "3 debug pnpm:stage": {
+    "prefix": "/Users/gngrchw/Code/lazyLoadImg",
+    "stage": "resolution_started"
+  },
+  "4 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/microbundle/0.11.0",
+    "wanted": {
+      "name": "microbundle",
+      "rawSpec": "latest"
     }
+  },
+  "5 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/microbundle/0.11.0",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "6 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@babel/plugin-proposal-class-properties/7.2.1",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/microbundle/0.11.0",
+      "name": "@babel/plugin-proposal-class-properties",
+      "rawSpec": "7.2.1"
+    }
+  },
+  "7 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@babel/plugin-proposal-class-properties/7.2.1",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "8 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@babel/core/7.9.0",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/microbundle/0.11.0",
+      "name": "@babel/core",
+      "rawSpec": "^7.2.2"
+    }
+  },
+  "9 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@babel/core/7.9.0",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "10 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/rollup-plugin-alias/1.5.2",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/microbundle/0.11.0",
+      "name": "rollup-plugin-alias",
+      "rawSpec": "^1.5.1"
+    }
+  },
+  "11 debug pnpm:deprecation": {
+    "deprecated": "This module has moved and is now available at @rollup/plugin-alias. Please update your dependencies. This version is no longer maintained.",
+    "depth": 1,
+    "pkgId": "registry.npmjs.org/rollup-plugin-alias/1.5.2",
+    "pkgName": "rollup-plugin-alias",
+    "pkgVersion": "1.5.2",
+    "prefix": "/Users/gngrchw/Code/lazyLoadImg"
+  },
+  "12 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/rollup-plugin-alias/1.5.2",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "13 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@babel/plugin-syntax-jsx/7.8.3",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/microbundle/0.11.0",
+      "name": "@babel/plugin-syntax-jsx",
+      "rawSpec": "^7.2.0"
+    }
+  },
+  "14 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@babel/plugin-syntax-jsx/7.8.3",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "15 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@babel/core/7.9.0",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "found_in_store"
+  },
+  "16 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/autoprefixer/9.7.6",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/microbundle/0.11.0",
+      "name": "autoprefixer",
+      "rawSpec": "^9.0.0"
+    }
+  },
+  "17 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/autoprefixer/9.7.6",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "18 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/babel-plugin-transform-async-to-promises/0.8.15",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/microbundle/0.11.0",
+      "name": "babel-plugin-transform-async-to-promises",
+      "rawSpec": "^0.8.3"
+    }
+  },
+  "19 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/babel-plugin-transform-async-to-promises/0.8.15",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "20 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/gzip-size/5.1.1",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/microbundle/0.11.0",
+      "name": "gzip-size",
+      "rawSpec": "^5.0.0"
+    }
+  },
+  "21 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/gzip-size/5.1.1",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "22 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/pretty-bytes/5.3.0",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/microbundle/0.11.0",
+      "name": "pretty-bytes",
+      "rawSpec": "^5.1.0"
+    }
+  },
+  "23 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/pretty-bytes/5.3.0",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "24 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/microbundle/0.11.0",
+      "name": "@babel/polyfill",
+      "rawSpec": "^7.0.0"
+    }
+  },
+  "25 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "26 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/camelcase/5.3.1",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/microbundle/0.11.0",
+      "name": "camelcase",
+      "rawSpec": "^5.0.0"
+    }
+  },
+  "27 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/camelcase/5.3.1",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "28 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/microbundle/0.11.0",
+    "size": 41468,
+    "status": "started"
+  },
+  "29 debug pnpm:fetching-progress": {
+    "downloaded": 701,
+    "packageId": "registry.npmjs.org/microbundle/0.11.0",
+    "status": "in_progress"
+  },
+  "30 debug pnpm:fetching-progress": {
+    "downloaded": 2070,
+    "packageId": "registry.npmjs.org/microbundle/0.11.0",
+    "status": "in_progress"
+  },
+  "31 debug pnpm:fetching-progress": {
+    "downloaded": 3439,
+    "packageId": "registry.npmjs.org/microbundle/0.11.0",
+    "status": "in_progress"
+  },
+  "32 debug pnpm:fetching-progress": {
+    "downloaded": 4808,
+    "packageId": "registry.npmjs.org/microbundle/0.11.0",
+    "status": "in_progress"
+  },
+  "33 debug pnpm:fetching-progress": {
+    "downloaded": 6177,
+    "packageId": "registry.npmjs.org/microbundle/0.11.0",
+    "status": "in_progress"
+  },
+  "34 debug pnpm:fetching-progress": {
+    "downloaded": 7546,
+    "packageId": "registry.npmjs.org/microbundle/0.11.0",
+    "status": "in_progress"
+  },
+  "35 debug pnpm:fetching-progress": {
+    "downloaded": 8915,
+    "packageId": "registry.npmjs.org/microbundle/0.11.0",
+    "status": "in_progress"
+  },
+  "36 debug pnpm:fetching-progress": {
+    "downloaded": 10284,
+    "packageId": "registry.npmjs.org/microbundle/0.11.0",
+    "status": "in_progress"
+  },
+  "37 debug pnpm:fetching-progress": {
+    "downloaded": 11653,
+    "packageId": "registry.npmjs.org/microbundle/0.11.0",
+    "status": "in_progress"
+  },
+  "38 debug pnpm:fetching-progress": {
+    "downloaded": 13022,
+    "packageId": "registry.npmjs.org/microbundle/0.11.0",
+    "status": "in_progress"
+  },
+  "39 debug pnpm:fetching-progress": {
+    "downloaded": 14391,
+    "packageId": "registry.npmjs.org/microbundle/0.11.0",
+    "status": "in_progress"
+  },
+  "40 debug pnpm:fetching-progress": {
+    "downloaded": 15760,
+    "packageId": "registry.npmjs.org/microbundle/0.11.0",
+    "status": "in_progress"
+  },
+  "41 debug pnpm:fetching-progress": {
+    "downloaded": 17129,
+    "packageId": "registry.npmjs.org/microbundle/0.11.0",
+    "status": "in_progress"
+  },
+  "42 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/asyncro/3.0.0",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/microbundle/0.11.0",
+      "name": "asyncro",
+      "rawSpec": "^3.0.0"
+    }
+  },
+  "43 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/asyncro/3.0.0",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "44 debug pnpm:fetching-progress": {
+    "downloaded": 18498,
+    "packageId": "registry.npmjs.org/microbundle/0.11.0",
+    "status": "in_progress"
+  },
+  "45 debug pnpm:fetching-progress": {
+    "downloaded": 19867,
+    "packageId": "registry.npmjs.org/microbundle/0.11.0",
+    "status": "in_progress"
+  },
+  "46 debug pnpm:fetching-progress": {
+    "downloaded": 21236,
+    "packageId": "registry.npmjs.org/microbundle/0.11.0",
+    "status": "in_progress"
+  },
+  "47 debug pnpm:fetching-progress": {
+    "downloaded": 22605,
+    "packageId": "registry.npmjs.org/microbundle/0.11.0",
+    "status": "in_progress"
+  },
+  "48 debug pnpm:fetching-progress": {
+    "downloaded": 23974,
+    "packageId": "registry.npmjs.org/microbundle/0.11.0",
+    "status": "in_progress"
+  },
+  "49 debug pnpm:fetching-progress": {
+    "downloaded": 25343,
+    "packageId": "registry.npmjs.org/microbundle/0.11.0",
+    "status": "in_progress"
+  },
+  "50 debug pnpm:fetching-progress": {
+    "downloaded": 26712,
+    "packageId": "registry.npmjs.org/microbundle/0.11.0",
+    "status": "in_progress"
+  },
+  "51 debug pnpm:fetching-progress": {
+    "downloaded": 28081,
+    "packageId": "registry.npmjs.org/microbundle/0.11.0",
+    "status": "in_progress"
+  },
+  "52 debug pnpm:fetching-progress": {
+    "downloaded": 29450,
+    "packageId": "registry.npmjs.org/microbundle/0.11.0",
+    "status": "in_progress"
+  },
+  "53 debug pnpm:fetching-progress": {
+    "downloaded": 30819,
+    "packageId": "registry.npmjs.org/microbundle/0.11.0",
+    "status": "in_progress"
+  },
+  "54 debug pnpm:fetching-progress": {
+    "downloaded": 32084,
+    "packageId": "registry.npmjs.org/microbundle/0.11.0",
+    "status": "in_progress"
+  },
+  "55 debug pnpm:fetching-progress": {
+    "downloaded": 33453,
+    "packageId": "registry.npmjs.org/microbundle/0.11.0",
+    "status": "in_progress"
+  },
+  "56 debug pnpm:fetching-progress": {
+    "downloaded": 34822,
+    "packageId": "registry.npmjs.org/microbundle/0.11.0",
+    "status": "in_progress"
+  },
+  "57 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/rollup-plugin-babel/4.4.0",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/microbundle/0.11.0",
+      "name": "rollup-plugin-babel",
+      "rawSpec": "^4.1.0-0"
+    }
+  },
+  "58 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/rollup-plugin-babel/4.4.0",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "59 debug pnpm:fetching-progress": {
+    "downloaded": 36191,
+    "packageId": "registry.npmjs.org/microbundle/0.11.0",
+    "status": "in_progress"
+  },
+  "60 debug pnpm:fetching-progress": {
+    "downloaded": 37560,
+    "packageId": "registry.npmjs.org/microbundle/0.11.0",
+    "status": "in_progress"
+  },
+  "61 debug pnpm:fetching-progress": {
+    "downloaded": 38929,
+    "packageId": "registry.npmjs.org/microbundle/0.11.0",
+    "status": "in_progress"
+  },
+  "62 debug pnpm:fetching-progress": {
+    "downloaded": 40298,
+    "packageId": "registry.npmjs.org/microbundle/0.11.0",
+    "status": "in_progress"
+  },
+  "63 debug pnpm:fetching-progress": {
+    "downloaded": 41468,
+    "packageId": "registry.npmjs.org/microbundle/0.11.0",
+    "status": "in_progress"
+  },
+  "64 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/rollup-plugin-alias/1.5.2",
+    "size": 3720,
+    "status": "started"
+  },
+  "65 debug pnpm:fetching-progress": {
+    "downloaded": 3563,
+    "packageId": "registry.npmjs.org/rollup-plugin-alias/1.5.2",
+    "status": "in_progress"
+  },
+  "66 debug pnpm:fetching-progress": {
+    "downloaded": 3720,
+    "packageId": "registry.npmjs.org/rollup-plugin-alias/1.5.2",
+    "status": "in_progress"
+  },
+  "67 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@babel/plugin-syntax-jsx/7.8.3",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "found_in_store"
+  },
+  "68 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/autoprefixer/9.7.6",
+    "size": 72249,
+    "status": "started"
+  },
+  "69 debug pnpm:fetching-progress": {
+    "downloaded": 703,
+    "packageId": "registry.npmjs.org/autoprefixer/9.7.6",
+    "status": "in_progress"
+  },
+  "70 debug pnpm:fetching-progress": {
+    "downloaded": 2072,
+    "packageId": "registry.npmjs.org/autoprefixer/9.7.6",
+    "status": "in_progress"
+  },
+  "71 debug pnpm:fetching-progress": {
+    "downloaded": 3441,
+    "packageId": "registry.npmjs.org/autoprefixer/9.7.6",
+    "status": "in_progress"
+  },
+  "72 debug pnpm:fetching-progress": {
+    "downloaded": 4810,
+    "packageId": "registry.npmjs.org/autoprefixer/9.7.6",
+    "status": "in_progress"
+  },
+  "73 debug pnpm:fetching-progress": {
+    "downloaded": 6179,
+    "packageId": "registry.npmjs.org/autoprefixer/9.7.6",
+    "status": "in_progress"
+  },
+  "74 debug pnpm:fetching-progress": {
+    "downloaded": 7548,
+    "packageId": "registry.npmjs.org/autoprefixer/9.7.6",
+    "status": "in_progress"
+  },
+  "75 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/pretty-bytes/5.3.0",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "found_in_store"
+  },
+  "76 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/rollup-plugin-commonjs/9.3.4",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/microbundle/0.11.0",
+      "name": "rollup-plugin-commonjs",
+      "rawSpec": "^9.0.0"
+    }
+  },
+  "77 debug pnpm:deprecation": {
+    "deprecated": "This package has been deprecated and is no longer maintained. Please use @rollup/plugin-commonjs.",
+    "depth": 1,
+    "pkgId": "registry.npmjs.org/rollup-plugin-commonjs/9.3.4",
+    "pkgName": "rollup-plugin-commonjs",
+    "pkgVersion": "9.3.4",
+    "prefix": "/Users/gngrchw/Code/lazyLoadImg"
+  },
+  "78 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/rollup-plugin-commonjs/9.3.4",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "79 debug pnpm:fetching-progress": {
+    "downloaded": 8917,
+    "packageId": "registry.npmjs.org/autoprefixer/9.7.6",
+    "status": "in_progress"
+  },
+  "80 debug pnpm:fetching-progress": {
+    "downloaded": 10286,
+    "packageId": "registry.npmjs.org/autoprefixer/9.7.6",
+    "status": "in_progress"
+  },
+  "81 debug pnpm:fetching-progress": {
+    "downloaded": 11655,
+    "packageId": "registry.npmjs.org/autoprefixer/9.7.6",
+    "status": "in_progress"
+  },
+  "82 debug pnpm:fetching-progress": {
+    "downloaded": 13024,
+    "packageId": "registry.npmjs.org/autoprefixer/9.7.6",
+    "status": "in_progress"
+  },
+  "83 debug pnpm:fetching-progress": {
+    "downloaded": 14393,
+    "packageId": "registry.npmjs.org/autoprefixer/9.7.6",
+    "status": "in_progress"
+  },
+  "84 debug pnpm:fetching-progress": {
+    "downloaded": 15762,
+    "packageId": "registry.npmjs.org/autoprefixer/9.7.6",
+    "status": "in_progress"
+  },
+  "85 debug pnpm:fetching-progress": {
+    "downloaded": 17131,
+    "packageId": "registry.npmjs.org/autoprefixer/9.7.6",
+    "status": "in_progress"
+  },
+  "86 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/gzip-size/5.1.1",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "found_in_store"
+  },
+  "87 debug pnpm:fetching-progress": {
+    "downloaded": 21360,
+    "packageId": "registry.npmjs.org/autoprefixer/9.7.6",
+    "status": "in_progress"
+  },
+  "88 debug pnpm:fetching-progress": {
+    "downloaded": 25589,
+    "packageId": "registry.npmjs.org/autoprefixer/9.7.6",
+    "status": "in_progress"
+  },
+  "89 debug pnpm:fetching-progress": {
+    "downloaded": 29818,
+    "packageId": "registry.npmjs.org/autoprefixer/9.7.6",
+    "status": "in_progress"
+  },
+  "90 debug pnpm:fetching-progress": {
+    "downloaded": 32086,
+    "packageId": "registry.npmjs.org/autoprefixer/9.7.6",
+    "status": "in_progress"
+  },
+  "91 debug pnpm:fetching-progress": {
+    "downloaded": 36315,
+    "packageId": "registry.npmjs.org/autoprefixer/9.7.6",
+    "status": "in_progress"
+  },
+  "92 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/camelcase/5.3.1",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "found_in_store"
+  },
+  "93 debug pnpm:fetching-progress": {
+    "downloaded": 40544,
+    "packageId": "registry.npmjs.org/autoprefixer/9.7.6",
+    "status": "in_progress"
+  },
+  "94 debug pnpm:fetching-progress": {
+    "downloaded": 44773,
+    "packageId": "registry.npmjs.org/autoprefixer/9.7.6",
+    "status": "in_progress"
+  },
+  "95 debug pnpm:fetching-progress": {
+    "downloaded": 49002,
+    "packageId": "registry.npmjs.org/autoprefixer/9.7.6",
+    "status": "in_progress"
+  },
+  "96 debug pnpm:fetching-progress": {
+    "downloaded": 53231,
+    "packageId": "registry.npmjs.org/autoprefixer/9.7.6",
+    "status": "in_progress"
+  },
+  "97 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/babel-plugin-transform-async-to-promises/0.8.15",
+    "size": 59729,
+    "status": "started"
+  },
+  "98 debug pnpm:fetching-progress": {
+    "downloaded": 704,
+    "packageId": "registry.npmjs.org/babel-plugin-transform-async-to-promises/0.8.15",
+    "status": "in_progress"
+  },
+  "99 debug pnpm:fetching-progress": {
+    "downloaded": 2073,
+    "packageId": "registry.npmjs.org/babel-plugin-transform-async-to-promises/0.8.15",
+    "status": "in_progress"
+  },
+  "100 debug pnpm:fetching-progress": {
+    "downloaded": 3442,
+    "packageId": "registry.npmjs.org/babel-plugin-transform-async-to-promises/0.8.15",
+    "status": "in_progress"
+  },
+  "101 debug pnpm:fetching-progress": {
+    "downloaded": 4811,
+    "packageId": "registry.npmjs.org/babel-plugin-transform-async-to-promises/0.8.15",
+    "status": "in_progress"
+  },
+  "102 debug pnpm:fetching-progress": {
+    "downloaded": 6180,
+    "packageId": "registry.npmjs.org/babel-plugin-transform-async-to-promises/0.8.15",
+    "status": "in_progress"
+  },
+  "103 debug pnpm:fetching-progress": {
+    "downloaded": 7549,
+    "packageId": "registry.npmjs.org/babel-plugin-transform-async-to-promises/0.8.15",
+    "status": "in_progress"
+  },
+  "104 debug pnpm:fetching-progress": {
+    "downloaded": 8918,
+    "packageId": "registry.npmjs.org/babel-plugin-transform-async-to-promises/0.8.15",
+    "status": "in_progress"
+  },
+  "105 debug pnpm:fetching-progress": {
+    "downloaded": 10287,
+    "packageId": "registry.npmjs.org/babel-plugin-transform-async-to-promises/0.8.15",
+    "status": "in_progress"
+  },
+  "106 debug pnpm:fetching-progress": {
+    "downloaded": 11656,
+    "packageId": "registry.npmjs.org/babel-plugin-transform-async-to-promises/0.8.15",
+    "status": "in_progress"
+  },
+  "107 debug pnpm:fetching-progress": {
+    "downloaded": 13025,
+    "packageId": "registry.npmjs.org/babel-plugin-transform-async-to-promises/0.8.15",
+    "status": "in_progress"
+  },
+  "108 debug pnpm:fetching-progress": {
+    "downloaded": 14394,
+    "packageId": "registry.npmjs.org/babel-plugin-transform-async-to-promises/0.8.15",
+    "status": "in_progress"
+  },
+  "109 debug pnpm:fetching-progress": {
+    "downloaded": 15763,
+    "packageId": "registry.npmjs.org/babel-plugin-transform-async-to-promises/0.8.15",
+    "status": "in_progress"
+  },
+  "110 debug pnpm:fetching-progress": {
+    "downloaded": 17132,
+    "packageId": "registry.npmjs.org/babel-plugin-transform-async-to-promises/0.8.15",
+    "status": "in_progress"
+  },
+  "111 debug pnpm:fetching-progress": {
+    "downloaded": 57460,
+    "packageId": "registry.npmjs.org/autoprefixer/9.7.6",
+    "status": "in_progress"
+  },
+  "112 debug pnpm:fetching-progress": {
+    "downloaded": 61689,
+    "packageId": "registry.npmjs.org/autoprefixer/9.7.6",
+    "status": "in_progress"
+  },
+  "113 debug pnpm:fetching-progress": {
+    "downloaded": 64854,
+    "packageId": "registry.npmjs.org/autoprefixer/9.7.6",
+    "status": "in_progress"
+  },
+  "114 debug pnpm:fetching-progress": {
+    "downloaded": 69083,
+    "packageId": "registry.npmjs.org/autoprefixer/9.7.6",
+    "status": "in_progress"
+  },
+  "115 debug pnpm:fetching-progress": {
+    "downloaded": 72249,
+    "packageId": "registry.npmjs.org/autoprefixer/9.7.6",
+    "status": "in_progress"
+  },
+  "116 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "size": 131363,
+    "status": "started"
+  },
+  "117 debug pnpm:fetching-progress": {
+    "downloaded": 697,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "118 debug pnpm:fetching-progress": {
+    "downloaded": 2066,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "119 debug pnpm:fetching-progress": {
+    "downloaded": 18501,
+    "packageId": "registry.npmjs.org/babel-plugin-transform-async-to-promises/0.8.15",
+    "status": "in_progress"
+  },
+  "120 debug pnpm:fetching-progress": {
+    "downloaded": 19870,
+    "packageId": "registry.npmjs.org/babel-plugin-transform-async-to-promises/0.8.15",
+    "status": "in_progress"
+  },
+  "121 debug pnpm:fetching-progress": {
+    "downloaded": 21239,
+    "packageId": "registry.npmjs.org/babel-plugin-transform-async-to-promises/0.8.15",
+    "status": "in_progress"
+  },
+  "122 debug pnpm:fetching-progress": {
+    "downloaded": 22608,
+    "packageId": "registry.npmjs.org/babel-plugin-transform-async-to-promises/0.8.15",
+    "status": "in_progress"
+  },
+  "123 debug pnpm:fetching-progress": {
+    "downloaded": 23977,
+    "packageId": "registry.npmjs.org/babel-plugin-transform-async-to-promises/0.8.15",
+    "status": "in_progress"
+  },
+  "124 debug pnpm:fetching-progress": {
+    "downloaded": 25346,
+    "packageId": "registry.npmjs.org/babel-plugin-transform-async-to-promises/0.8.15",
+    "status": "in_progress"
+  },
+  "125 debug pnpm:fetching-progress": {
+    "downloaded": 26715,
+    "packageId": "registry.npmjs.org/babel-plugin-transform-async-to-promises/0.8.15",
+    "status": "in_progress"
+  },
+  "126 debug pnpm:fetching-progress": {
+    "downloaded": 28084,
+    "packageId": "registry.npmjs.org/babel-plugin-transform-async-to-promises/0.8.15",
+    "status": "in_progress"
+  },
+  "127 debug pnpm:fetching-progress": {
+    "downloaded": 29453,
+    "packageId": "registry.npmjs.org/babel-plugin-transform-async-to-promises/0.8.15",
+    "status": "in_progress"
+  },
+  "128 debug pnpm:fetching-progress": {
+    "downloaded": 30822,
+    "packageId": "registry.npmjs.org/babel-plugin-transform-async-to-promises/0.8.15",
+    "status": "in_progress"
+  },
+  "129 debug pnpm:fetching-progress": {
+    "downloaded": 32087,
+    "packageId": "registry.npmjs.org/babel-plugin-transform-async-to-promises/0.8.15",
+    "status": "in_progress"
+  },
+  "130 debug pnpm:fetching-progress": {
+    "downloaded": 33456,
+    "packageId": "registry.npmjs.org/babel-plugin-transform-async-to-promises/0.8.15",
+    "status": "in_progress"
+  },
+  "131 debug pnpm:fetching-progress": {
+    "downloaded": 34825,
+    "packageId": "registry.npmjs.org/babel-plugin-transform-async-to-promises/0.8.15",
+    "status": "in_progress"
+  },
+  "132 debug pnpm:fetching-progress": {
+    "downloaded": 3435,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "133 debug pnpm:fetching-progress": {
+    "downloaded": 4804,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "134 debug pnpm:fetching-progress": {
+    "downloaded": 6173,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "135 debug pnpm:fetching-progress": {
+    "downloaded": 7542,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "136 debug pnpm:fetching-progress": {
+    "downloaded": 8911,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "137 debug pnpm:fetching-progress": {
+    "downloaded": 10280,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "138 debug pnpm:fetching-progress": {
+    "downloaded": 11649,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "139 debug pnpm:fetching-progress": {
+    "downloaded": 13018,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "140 debug pnpm:fetching-progress": {
+    "downloaded": 14387,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "141 debug pnpm:fetching-progress": {
+    "downloaded": 36194,
+    "packageId": "registry.npmjs.org/babel-plugin-transform-async-to-promises/0.8.15",
+    "status": "in_progress"
+  },
+  "142 debug pnpm:fetching-progress": {
+    "downloaded": 37563,
+    "packageId": "registry.npmjs.org/babel-plugin-transform-async-to-promises/0.8.15",
+    "status": "in_progress"
+  },
+  "143 debug pnpm:fetching-progress": {
+    "downloaded": 38932,
+    "packageId": "registry.npmjs.org/babel-plugin-transform-async-to-promises/0.8.15",
+    "status": "in_progress"
+  },
+  "144 debug pnpm:fetching-progress": {
+    "downloaded": 40301,
+    "packageId": "registry.npmjs.org/babel-plugin-transform-async-to-promises/0.8.15",
+    "status": "in_progress"
+  },
+  "145 debug pnpm:fetching-progress": {
+    "downloaded": 41670,
+    "packageId": "registry.npmjs.org/babel-plugin-transform-async-to-promises/0.8.15",
+    "status": "in_progress"
+  },
+  "146 debug pnpm:fetching-progress": {
+    "downloaded": 43039,
+    "packageId": "registry.npmjs.org/babel-plugin-transform-async-to-promises/0.8.15",
+    "status": "in_progress"
+  },
+  "147 debug pnpm:fetching-progress": {
+    "downloaded": 44408,
+    "packageId": "registry.npmjs.org/babel-plugin-transform-async-to-promises/0.8.15",
+    "status": "in_progress"
+  },
+  "148 debug pnpm:fetching-progress": {
+    "downloaded": 48637,
+    "packageId": "registry.npmjs.org/babel-plugin-transform-async-to-promises/0.8.15",
+    "status": "in_progress"
+  },
+  "149 debug pnpm:fetching-progress": {
+    "downloaded": 52866,
+    "packageId": "registry.npmjs.org/babel-plugin-transform-async-to-promises/0.8.15",
+    "status": "in_progress"
+  },
+  "150 debug pnpm:fetching-progress": {
+    "downloaded": 15756,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "151 debug pnpm:fetching-progress": {
+    "downloaded": 17125,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "152 debug pnpm:fetching-progress": {
+    "downloaded": 18494,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "153 debug pnpm:fetching-progress": {
+    "downloaded": 19863,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "154 debug pnpm:fetching-progress": {
+    "downloaded": 21232,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "155 debug pnpm:fetching-progress": {
+    "downloaded": 22601,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "156 debug pnpm:fetching-progress": {
+    "downloaded": 23970,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "157 debug pnpm:fetching-progress": {
+    "downloaded": 25339,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "158 debug pnpm:fetching-progress": {
+    "downloaded": 26708,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "159 debug pnpm:fetching-progress": {
+    "downloaded": 28077,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "160 debug pnpm:fetching-progress": {
+    "downloaded": 29446,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "161 debug pnpm:fetching-progress": {
+    "downloaded": 30815,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "162 debug pnpm:fetching-progress": {
+    "downloaded": 57095,
+    "packageId": "registry.npmjs.org/babel-plugin-transform-async-to-promises/0.8.15",
+    "status": "in_progress"
+  },
+  "163 debug pnpm:fetching-progress": {
+    "downloaded": 59729,
+    "packageId": "registry.npmjs.org/babel-plugin-transform-async-to-promises/0.8.15",
+    "status": "in_progress"
+  },
+  "164 debug pnpm:fetching-progress": {
+    "downloaded": 32080,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "165 debug pnpm:fetching-progress": {
+    "downloaded": 33449,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "166 debug pnpm:fetching-progress": {
+    "downloaded": 34818,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "167 debug pnpm:fetching-progress": {
+    "downloaded": 36187,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "168 debug pnpm:fetching-progress": {
+    "downloaded": 37556,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "169 debug pnpm:fetching-progress": {
+    "downloaded": 38925,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "170 debug pnpm:fetching-progress": {
+    "downloaded": 40294,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "171 debug pnpm:fetching-progress": {
+    "downloaded": 41663,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "172 debug pnpm:fetching-progress": {
+    "downloaded": 43032,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "173 debug pnpm:fetching-progress": {
+    "downloaded": 44401,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "174 debug pnpm:fetching-progress": {
+    "downloaded": 45770,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "175 debug pnpm:fetching-progress": {
+    "downloaded": 47139,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "176 debug pnpm:fetching-progress": {
+    "downloaded": 48508,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "177 debug pnpm:fetching-progress": {
+    "downloaded": 49877,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "178 debug pnpm:fetching-progress": {
+    "downloaded": 51246,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "179 debug pnpm:fetching-progress": {
+    "downloaded": 55475,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "180 debug pnpm:fetching-progress": {
+    "downloaded": 59704,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "181 debug pnpm:fetching-progress": {
+    "downloaded": 63933,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "182 debug pnpm:fetching-progress": {
+    "downloaded": 64848,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "183 debug pnpm:fetching-progress": {
+    "downloaded": 69077,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "184 debug pnpm:fetching-progress": {
+    "downloaded": 73306,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "185 debug pnpm:fetching-progress": {
+    "downloaded": 77535,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "186 debug pnpm:fetching-progress": {
+    "downloaded": 81764,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "187 debug pnpm:fetching-progress": {
+    "downloaded": 85993,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "188 debug pnpm:fetching-progress": {
+    "downloaded": 90222,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "189 debug pnpm:fetching-progress": {
+    "downloaded": 94451,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "190 debug pnpm:fetching-progress": {
+    "downloaded": 97616,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "191 debug pnpm:fetching-progress": {
+    "downloaded": 101845,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "192 debug pnpm:fetching-progress": {
+    "downloaded": 106074,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "193 debug pnpm:fetching-progress": {
+    "downloaded": 110303,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "194 debug pnpm:fetching-progress": {
+    "downloaded": 114532,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "195 debug pnpm:fetching-progress": {
+    "downloaded": 118761,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "196 debug pnpm:fetching-progress": {
+    "downloaded": 122990,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "197 debug pnpm:fetching-progress": {
+    "downloaded": 127219,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "198 debug pnpm:fetching-progress": {
+    "downloaded": 130384,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "199 debug pnpm:fetching-progress": {
+    "downloaded": 131363,
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "status": "in_progress"
+  },
+  "200 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/asyncro/3.0.0",
+    "size": 4460,
+    "status": "started"
+  },
+  "201 debug pnpm:fetching-progress": {
+    "downloaded": 3562,
+    "packageId": "registry.npmjs.org/asyncro/3.0.0",
+    "status": "in_progress"
+  },
+  "202 debug pnpm:fetching-progress": {
+    "downloaded": 4460,
+    "packageId": "registry.npmjs.org/asyncro/3.0.0",
+    "status": "in_progress"
+  },
+  "203 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/rollup-plugin-babel/4.4.0",
+    "size": 12802,
+    "status": "started"
+  },
+  "204 debug pnpm:fetching-progress": {
+    "downloaded": 3562,
+    "packageId": "registry.npmjs.org/rollup-plugin-babel/4.4.0",
+    "status": "in_progress"
+  },
+  "205 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/rollup-plugin-alias/1.5.2",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "fetched"
+  },
+  "206 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/cssnano/4.1.10",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/microbundle/0.11.0",
+      "name": "cssnano",
+      "rawSpec": "^4.1.7"
+    }
+  },
+  "207 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/cssnano/4.1.10",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "208 debug pnpm:fetching-progress": {
+    "downloaded": 7791,
+    "packageId": "registry.npmjs.org/rollup-plugin-babel/4.4.0",
+    "status": "in_progress"
+  },
+  "209 debug pnpm:fetching-progress": {
+    "downloaded": 12020,
+    "packageId": "registry.npmjs.org/rollup-plugin-babel/4.4.0",
+    "status": "in_progress"
+  },
+  "210 debug pnpm:fetching-progress": {
+    "downloaded": 12802,
+    "packageId": "registry.npmjs.org/rollup-plugin-babel/4.4.0",
+    "status": "in_progress"
+  },
+  "211 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/cssnano/4.1.10",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "found_in_store"
+  },
+  "212 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/babel-plugin-transform-async-to-promises/0.8.15",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "fetched"
+  },
+  "213 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/microbundle/0.11.0",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "fetched"
+  },
+  "214 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/asyncro/3.0.0",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "fetched"
+  },
+  "215 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "fetched"
+  },
+  "216 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/chalk/2.4.2",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/microbundle/0.11.0",
+      "name": "chalk",
+      "rawSpec": "^2.4.0"
+    }
+  },
+  "217 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/chalk/2.4.2",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "218 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/es6-promisify/6.1.0",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/microbundle/0.11.0",
+      "name": "es6-promisify",
+      "rawSpec": "^6.0.1"
+    }
+  },
+  "219 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/es6-promisify/6.1.0",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "220 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/brotli-size/0.0.3",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/microbundle/0.11.0",
+      "name": "brotli-size",
+      "rawSpec": "^0.0.3"
+    }
+  },
+  "221 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/brotli-size/0.0.3",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "222 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/rollup-plugin-commonjs/9.3.4",
+    "size": 48699,
+    "status": "started"
+  },
+  "223 debug pnpm:fetching-progress": {
+    "downloaded": 3560,
+    "packageId": "registry.npmjs.org/rollup-plugin-commonjs/9.3.4",
+    "status": "in_progress"
+  },
+  "224 debug pnpm:fetching-progress": {
+    "downloaded": 7789,
+    "packageId": "registry.npmjs.org/rollup-plugin-commonjs/9.3.4",
+    "status": "in_progress"
+  },
+  "225 debug pnpm:fetching-progress": {
+    "downloaded": 12018,
+    "packageId": "registry.npmjs.org/rollup-plugin-commonjs/9.3.4",
+    "status": "in_progress"
+  },
+  "226 debug pnpm:fetching-progress": {
+    "downloaded": 16247,
+    "packageId": "registry.npmjs.org/rollup-plugin-commonjs/9.3.4",
+    "status": "in_progress"
+  },
+  "227 debug pnpm:fetching-progress": {
+    "downloaded": 20476,
+    "packageId": "registry.npmjs.org/rollup-plugin-commonjs/9.3.4",
+    "status": "in_progress"
+  },
+  "228 debug pnpm:fetching-progress": {
+    "downloaded": 24705,
+    "packageId": "registry.npmjs.org/rollup-plugin-commonjs/9.3.4",
+    "status": "in_progress"
+  },
+  "229 debug pnpm:fetching-progress": {
+    "downloaded": 28934,
+    "packageId": "registry.npmjs.org/rollup-plugin-commonjs/9.3.4",
+    "status": "in_progress"
+  },
+  "230 debug pnpm:fetching-progress": {
+    "downloaded": 32083,
+    "packageId": "registry.npmjs.org/rollup-plugin-commonjs/9.3.4",
+    "status": "in_progress"
+  },
+  "231 debug pnpm:fetching-progress": {
+    "downloaded": 36312,
+    "packageId": "registry.npmjs.org/rollup-plugin-commonjs/9.3.4",
+    "status": "in_progress"
+  },
+  "232 debug pnpm:fetching-progress": {
+    "downloaded": 40541,
+    "packageId": "registry.npmjs.org/rollup-plugin-commonjs/9.3.4",
+    "status": "in_progress"
+  },
+  "233 debug pnpm:fetching-progress": {
+    "downloaded": 44770,
+    "packageId": "registry.npmjs.org/rollup-plugin-commonjs/9.3.4",
+    "status": "in_progress"
+  },
+  "234 debug pnpm:fetching-progress": {
+    "downloaded": 48699,
+    "packageId": "registry.npmjs.org/rollup-plugin-commonjs/9.3.4",
+    "status": "in_progress"
+  },
+  "235 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/@babel/plugin-proposal-class-properties/7.2.1",
+    "size": 1713,
+    "status": "started"
+  },
+  "236 debug pnpm:fetching-progress": {
+    "downloaded": 1713,
+    "packageId": "registry.npmjs.org/@babel/plugin-proposal-class-properties/7.2.1",
+    "status": "in_progress"
+  },
+  "237 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/chalk/2.4.2",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "found_in_store"
+  },
+  "238 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/rollup-plugin-babel/4.4.0",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "fetched"
+  },
+  "239 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/rollup-plugin-node-resolve/4.2.4",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/microbundle/0.11.0",
+      "name": "rollup-plugin-node-resolve",
+      "rawSpec": "^4.0.0"
+    }
+  },
+  "240 debug pnpm:deprecation": {
+    "deprecated": "This package has been deprecated and is no longer maintained. Please use @rollup/plugin-node-resolve.",
+    "depth": 1,
+    "pkgId": "registry.npmjs.org/rollup-plugin-node-resolve/4.2.4",
+    "pkgName": "rollup-plugin-node-resolve",
+    "pkgVersion": "4.2.4",
+    "prefix": "/Users/gngrchw/Code/lazyLoadImg"
+  },
+  "241 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/rollup-plugin-node-resolve/4.2.4",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "242 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/rollup-plugin-json/3.1.0",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/microbundle/0.11.0",
+      "name": "rollup-plugin-json",
+      "rawSpec": "^3.1.0"
+    }
+  },
+  "243 debug pnpm:deprecation": {
+    "deprecated": "This module has been deprecated and is no longer maintained. Please use @rollup/plugin-json.",
+    "depth": 1,
+    "pkgId": "registry.npmjs.org/rollup-plugin-json/3.1.0",
+    "pkgName": "rollup-plugin-json",
+    "pkgVersion": "3.1.0",
+    "prefix": "/Users/gngrchw/Code/lazyLoadImg"
+  },
+  "244 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/rollup-plugin-json/3.1.0",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "245 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/rollup-plugin-buble/0.19.8",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/microbundle/0.11.0",
+      "name": "rollup-plugin-buble",
+      "rawSpec": "^0.19.4"
+    }
+  },
+  "246 debug pnpm:deprecation": {
+    "deprecated": "This module has been deprecated and is no longer maintained. Please use @rollup/plugin-buble.",
+    "depth": 1,
+    "pkgId": "registry.npmjs.org/rollup-plugin-buble/0.19.8",
+    "pkgName": "rollup-plugin-buble",
+    "pkgVersion": "0.19.8",
+    "prefix": "/Users/gngrchw/Code/lazyLoadImg"
+  },
+  "247 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/rollup-plugin-buble/0.19.8",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "248 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/rollup-plugin-bundle-size/1.0.3",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/microbundle/0.11.0",
+      "name": "rollup-plugin-bundle-size",
+      "rawSpec": "^1.0.1"
+    }
+  },
+  "249 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/rollup-plugin-bundle-size/1.0.3",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "250 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/rollup-plugin-es3/1.1.0",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/microbundle/0.11.0",
+      "name": "rollup-plugin-es3",
+      "rawSpec": "^1.1.0"
+    }
+  },
+  "251 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/rollup-plugin-es3/1.1.0",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "252 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@babel/plugin-proposal-class-properties/7.2.1",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "fetched"
+  },
+  "253 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/rollup-plugin-commonjs/9.3.4",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "fetched"
+  },
+  "254 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/microbundle/0.11.0",
+      "name": "rollup-plugin-typescript2",
+      "rawSpec": "^0.19.0"
+    }
+  },
+  "255 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "256 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/rollup-plugin-terser/3.0.0",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/microbundle/0.11.0",
+      "name": "rollup-plugin-terser",
+      "rawSpec": "^3.0.0"
+    }
+  },
+  "257 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/rollup-plugin-terser/3.0.0",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "258 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/autoprefixer/9.7.6",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "fetched"
+  },
+  "259 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/es6-promisify/6.1.0",
+    "size": 3274,
+    "status": "started"
+  },
+  "260 debug pnpm:fetching-progress": {
+    "downloaded": 702,
+    "packageId": "registry.npmjs.org/es6-promisify/6.1.0",
+    "status": "in_progress"
+  },
+  "261 debug pnpm:fetching-progress": {
+    "downloaded": 2071,
+    "packageId": "registry.npmjs.org/es6-promisify/6.1.0",
+    "status": "in_progress"
+  },
+  "262 debug pnpm:fetching-progress": {
+    "downloaded": 3274,
+    "packageId": "registry.npmjs.org/es6-promisify/6.1.0",
+    "status": "in_progress"
+  },
+  "263 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/rollup/0.67.4",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/microbundle/0.11.0",
+      "name": "rollup",
+      "rawSpec": "^0.67.3"
+    }
+  },
+  "264 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/rollup/0.67.4",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "265 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/rollup-plugin-json/3.1.0",
+    "size": 2902,
+    "status": "started"
+  },
+  "266 debug pnpm:fetching-progress": {
+    "downloaded": 2902,
+    "packageId": "registry.npmjs.org/rollup-plugin-json/3.1.0",
+    "status": "in_progress"
+  },
+  "267 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/rollup-plugin-node-resolve/4.2.4",
+    "size": 7727,
+    "status": "started"
+  },
+  "268 debug pnpm:fetching-progress": {
+    "downloaded": 3562,
+    "packageId": "registry.npmjs.org/rollup-plugin-node-resolve/4.2.4",
+    "status": "in_progress"
+  },
+  "269 debug pnpm:fetching-progress": {
+    "downloaded": 7727,
+    "packageId": "registry.npmjs.org/rollup-plugin-node-resolve/4.2.4",
+    "status": "in_progress"
+  },
+  "270 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/rollup-plugin-bundle-size/1.0.3",
+    "size": 1877,
+    "status": "started"
+  },
+  "271 debug pnpm:fetching-progress": {
+    "downloaded": 702,
+    "packageId": "registry.npmjs.org/rollup-plugin-bundle-size/1.0.3",
+    "status": "in_progress"
+  },
+  "272 debug pnpm:fetching-progress": {
+    "downloaded": 1877,
+    "packageId": "registry.npmjs.org/rollup-plugin-bundle-size/1.0.3",
+    "status": "in_progress"
+  },
+  "273 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/sade/1.7.3",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/microbundle/0.11.0",
+      "name": "sade",
+      "rawSpec": "^1.4.0"
+    }
+  },
+  "274 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/sade/1.7.3",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "275 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/rollup-plugin-buble/0.19.8",
+    "size": 1404,
+    "status": "started"
+  },
+  "276 debug pnpm:fetching-progress": {
+    "downloaded": 1404,
+    "packageId": "registry.npmjs.org/rollup-plugin-buble/0.19.8",
+    "status": "in_progress"
+  },
+  "277 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/rollup-plugin-flow/1.1.1",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/microbundle/0.11.0",
+      "name": "rollup-plugin-flow",
+      "rawSpec": "^1.1.1"
+    }
+  },
+  "278 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/rollup-plugin-flow/1.1.1",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "279 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/rollup-plugin-preserve-shebang/0.1.6",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/microbundle/0.11.0",
+      "name": "rollup-plugin-preserve-shebang",
+      "rawSpec": "^0.1.6"
+    }
+  },
+  "280 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/rollup-plugin-preserve-shebang/0.1.6",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "281 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/tslib/1.11.1",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/microbundle/0.11.0",
+      "name": "tslib",
+      "rawSpec": "^1.9.0"
+    }
+  },
+  "282 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/tslib/1.11.1",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "283 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/es6-promisify/6.1.0",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "fetched"
+  },
+  "284 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/tiny-glob/0.2.6",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/microbundle/0.11.0",
+      "name": "tiny-glob",
+      "rawSpec": "^0.2.6"
+    }
+  },
+  "285 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/tiny-glob/0.2.6",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "286 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/rollup-plugin-sizes/0.4.2",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/microbundle/0.11.0",
+      "name": "rollup-plugin-sizes",
+      "rawSpec": "^0.4.2"
+    }
+  },
+  "287 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/rollup-plugin-sizes/0.4.2",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "288 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "size": 785399,
+    "status": "started"
+  },
+  "289 debug pnpm:fetching-progress": {
+    "downloaded": 701,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "290 debug pnpm:fetching-progress": {
+    "downloaded": 2070,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "291 debug pnpm:fetching-progress": {
+    "downloaded": 3439,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "292 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/tslib/1.11.1",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "found_in_store"
+  },
+  "293 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/rollup-plugin-buble/0.19.8",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "fetched"
+  },
+  "294 debug pnpm:fetching-progress": {
+    "downloaded": 4808,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "295 debug pnpm:fetching-progress": {
+    "downloaded": 6177,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "296 debug pnpm:fetching-progress": {
+    "downloaded": 7546,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "297 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/rollup-plugin-bundle-size/1.0.3",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "fetched"
+  },
+  "298 debug pnpm:fetching-progress": {
+    "downloaded": 8915,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "299 debug pnpm:fetching-progress": {
+    "downloaded": 10284,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "300 debug pnpm:fetching-progress": {
+    "downloaded": 11653,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "301 debug pnpm:fetching-progress": {
+    "downloaded": 13022,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "302 debug pnpm:fetching-progress": {
+    "downloaded": 14391,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "303 debug pnpm:fetching-progress": {
+    "downloaded": 15760,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "304 debug pnpm:fetching-progress": {
+    "downloaded": 17129,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "305 debug pnpm:fetching-progress": {
+    "downloaded": 18498,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "306 debug pnpm:fetching-progress": {
+    "downloaded": 19867,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "307 debug pnpm:fetching-progress": {
+    "downloaded": 21236,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "308 debug pnpm:fetching-progress": {
+    "downloaded": 22605,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "309 debug pnpm:fetching-progress": {
+    "downloaded": 23974,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "310 debug pnpm:fetching-progress": {
+    "downloaded": 25343,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "311 debug pnpm:fetching-progress": {
+    "downloaded": 26712,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "312 debug pnpm:fetching-progress": {
+    "downloaded": 28081,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "313 debug pnpm:fetching-progress": {
+    "downloaded": 29450,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "314 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/rollup-plugin-json/3.1.0",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "fetched"
+  },
+  "315 debug pnpm:fetching-progress": {
+    "downloaded": 30819,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "316 debug pnpm:fetching-progress": {
+    "downloaded": 32084,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "317 debug pnpm:fetching-progress": {
+    "downloaded": 33453,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "318 debug pnpm:fetching-progress": {
+    "downloaded": 34822,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "319 debug pnpm:fetching-progress": {
+    "downloaded": 36191,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "320 debug pnpm:fetching-progress": {
+    "downloaded": 37560,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "321 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/rollup-plugin-node-resolve/4.2.4",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "fetched"
+  },
+  "322 debug pnpm:fetching-progress": {
+    "downloaded": 38929,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "323 debug pnpm:fetching-progress": {
+    "downloaded": 40298,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "324 debug pnpm:fetching-progress": {
+    "downloaded": 44527,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "325 debug pnpm:fetching-progress": {
+    "downloaded": 48756,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "326 debug pnpm:fetching-progress": {
+    "downloaded": 52985,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "327 debug pnpm:fetching-progress": {
+    "downloaded": 57214,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "328 debug pnpm:fetching-progress": {
+    "downloaded": 61443,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "329 debug pnpm:fetching-progress": {
+    "downloaded": 64852,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "330 debug pnpm:fetching-progress": {
+    "downloaded": 69081,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "331 debug pnpm:fetching-progress": {
+    "downloaded": 73310,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "332 debug pnpm:fetching-progress": {
+    "downloaded": 77539,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "333 debug pnpm:fetching-progress": {
+    "downloaded": 81768,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "334 debug pnpm:fetching-progress": {
+    "downloaded": 85997,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "335 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@babel/helper-create-class-features-plugin/7.8.6",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/@babel/plugin-proposal-class-properties/7.2.1",
+      "name": "@babel/helper-create-class-features-plugin",
+      "rawSpec": "^7.2.1"
+    }
+  },
+  "336 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@babel/helper-create-class-features-plugin/7.8.6",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "337 debug pnpm:fetching-progress": {
+    "downloaded": 90226,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "338 debug pnpm:fetching-progress": {
+    "downloaded": 94455,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "339 debug pnpm:fetching-progress": {
+    "downloaded": 97620,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "340 debug pnpm:fetching-progress": {
+    "downloaded": 101849,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "341 debug pnpm:fetching-progress": {
+    "downloaded": 106078,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "342 debug pnpm:fetching-progress": {
+    "downloaded": 110307,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "343 debug pnpm:fetching-progress": {
+    "downloaded": 114536,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "344 debug pnpm:fetching-progress": {
+    "downloaded": 118765,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "345 debug pnpm:fetching-progress": {
+    "downloaded": 122994,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "346 debug pnpm:fetching-progress": {
+    "downloaded": 127223,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "347 debug pnpm:fetching-progress": {
+    "downloaded": 130388,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "348 debug pnpm:fetching-progress": {
+    "downloaded": 134617,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "349 debug pnpm:fetching-progress": {
+    "downloaded": 138846,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "350 debug pnpm:fetching-progress": {
+    "downloaded": 143075,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "351 debug pnpm:fetching-progress": {
+    "downloaded": 147304,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "352 debug pnpm:fetching-progress": {
+    "downloaded": 151533,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "353 debug pnpm:fetching-progress": {
+    "downloaded": 155762,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "354 debug pnpm:fetching-progress": {
+    "downloaded": 159991,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "355 debug pnpm:fetching-progress": {
+    "downloaded": 163156,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "356 debug pnpm:fetching-progress": {
+    "downloaded": 167385,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "357 debug pnpm:fetching-progress": {
+    "downloaded": 171614,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "358 debug pnpm:fetching-progress": {
+    "downloaded": 175843,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "359 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@babel/helper-create-class-features-plugin/7.8.6",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "found_in_store"
+  },
+  "360 debug pnpm:fetching-progress": {
+    "downloaded": 180072,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "361 debug pnpm:fetching-progress": {
+    "downloaded": 184301,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "362 debug pnpm:fetching-progress": {
+    "downloaded": 188530,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "363 debug pnpm:fetching-progress": {
+    "downloaded": 192759,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "364 debug pnpm:fetching-progress": {
+    "downloaded": 195924,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "365 debug pnpm:fetching-progress": {
+    "downloaded": 200153,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "366 debug pnpm:fetching-progress": {
+    "downloaded": 204382,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "367 debug pnpm:fetching-progress": {
+    "downloaded": 220766,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "368 debug pnpm:fetching-progress": {
+    "downloaded": 228692,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "369 debug pnpm:fetching-progress": {
+    "downloaded": 245076,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "370 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/rollup/0.67.4",
+    "size": 616294,
+    "status": "started"
+  },
+  "371 debug pnpm:fetching-progress": {
+    "downloaded": 3561,
+    "packageId": "registry.npmjs.org/rollup/0.67.4",
+    "status": "in_progress"
+  },
+  "372 debug pnpm:fetching-progress": {
+    "downloaded": 19945,
+    "packageId": "registry.npmjs.org/rollup/0.67.4",
+    "status": "in_progress"
+  },
+  "373 debug pnpm:fetching-progress": {
+    "downloaded": 32084,
+    "packageId": "registry.npmjs.org/rollup/0.67.4",
+    "status": "in_progress"
+  },
+  "374 debug pnpm:fetching-progress": {
+    "downloaded": 48468,
+    "packageId": "registry.npmjs.org/rollup/0.67.4",
+    "status": "in_progress"
+  },
+  "375 debug pnpm:fetching-progress": {
+    "downloaded": 64852,
+    "packageId": "registry.npmjs.org/rollup/0.67.4",
+    "status": "in_progress"
+  },
+  "376 debug pnpm:fetching-progress": {
+    "downloaded": 81236,
+    "packageId": "registry.npmjs.org/rollup/0.67.4",
+    "status": "in_progress"
+  },
+  "377 debug pnpm:fetching-progress": {
+    "downloaded": 97620,
+    "packageId": "registry.npmjs.org/rollup/0.67.4",
+    "status": "in_progress"
+  },
+  "378 debug pnpm:fetching-progress": {
+    "downloaded": 114004,
+    "packageId": "registry.npmjs.org/rollup/0.67.4",
+    "status": "in_progress"
+  },
+  "379 debug pnpm:fetching-progress": {
+    "downloaded": 130388,
+    "packageId": "registry.npmjs.org/rollup/0.67.4",
+    "status": "in_progress"
+  },
+  "380 debug pnpm:fetching-progress": {
+    "downloaded": 146772,
+    "packageId": "registry.npmjs.org/rollup/0.67.4",
+    "status": "in_progress"
+  },
+  "381 debug pnpm:fetching-progress": {
+    "downloaded": 163156,
+    "packageId": "registry.npmjs.org/rollup/0.67.4",
+    "status": "in_progress"
+  },
+  "382 debug pnpm:fetching-progress": {
+    "downloaded": 170374,
+    "packageId": "registry.npmjs.org/rollup/0.67.4",
+    "status": "in_progress"
+  },
+  "383 debug pnpm:fetching-progress": {
+    "downloaded": 186758,
+    "packageId": "registry.npmjs.org/rollup/0.67.4",
+    "status": "in_progress"
+  },
+  "384 debug pnpm:fetching-progress": {
+    "downloaded": 203142,
+    "packageId": "registry.npmjs.org/rollup/0.67.4",
+    "status": "in_progress"
+  },
+  "385 debug pnpm:fetching-progress": {
+    "downloaded": 219526,
+    "packageId": "registry.npmjs.org/rollup/0.67.4",
+    "status": "in_progress"
+  },
+  "386 debug pnpm:fetching-progress": {
+    "downloaded": 235910,
+    "packageId": "registry.npmjs.org/rollup/0.67.4",
+    "status": "in_progress"
+  },
+  "387 debug pnpm:fetching-progress": {
+    "downloaded": 252294,
+    "packageId": "registry.npmjs.org/rollup/0.67.4",
+    "status": "in_progress"
+  },
+  "388 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/sade/1.7.3",
+    "size": 10766,
+    "status": "started"
+  },
+  "389 debug pnpm:fetching-progress": {
+    "downloaded": 701,
+    "packageId": "registry.npmjs.org/sade/1.7.3",
+    "status": "in_progress"
+  },
+  "390 debug pnpm:fetching-progress": {
+    "downloaded": 2070,
+    "packageId": "registry.npmjs.org/sade/1.7.3",
+    "status": "in_progress"
+  },
+  "391 debug pnpm:fetching-progress": {
+    "downloaded": 3439,
+    "packageId": "registry.npmjs.org/sade/1.7.3",
+    "status": "in_progress"
+  },
+  "392 debug pnpm:fetching-progress": {
+    "downloaded": 4808,
+    "packageId": "registry.npmjs.org/sade/1.7.3",
+    "status": "in_progress"
+  },
+  "393 debug pnpm:fetching-progress": {
+    "downloaded": 6177,
+    "packageId": "registry.npmjs.org/sade/1.7.3",
+    "status": "in_progress"
+  },
+  "394 debug pnpm:fetching-progress": {
+    "downloaded": 7546,
+    "packageId": "registry.npmjs.org/sade/1.7.3",
+    "status": "in_progress"
+  },
+  "395 debug pnpm:fetching-progress": {
+    "downloaded": 8915,
+    "packageId": "registry.npmjs.org/sade/1.7.3",
+    "status": "in_progress"
+  },
+  "396 debug pnpm:fetching-progress": {
+    "downloaded": 10284,
+    "packageId": "registry.npmjs.org/sade/1.7.3",
+    "status": "in_progress"
+  },
+  "397 debug pnpm:fetching-progress": {
+    "downloaded": 10766,
+    "packageId": "registry.npmjs.org/sade/1.7.3",
+    "status": "in_progress"
+  },
+  "398 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/sade/1.7.3",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "fetched"
+  },
+  "399 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/rollup-plugin-postcss/1.6.3",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/microbundle/0.11.0",
+      "name": "rollup-plugin-postcss",
+      "rawSpec": "^1.6.1"
+    }
+  },
+  "400 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/rollup-plugin-postcss/1.6.3",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "401 debug pnpm:fetching-progress": {
+    "downloaded": 261460,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "402 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/brotli-size/0.0.3",
+    "size": 1939,
+    "status": "started"
+  },
+  "403 debug pnpm:fetching-progress": {
+    "downloaded": 1939,
+    "packageId": "registry.npmjs.org/brotli-size/0.0.3",
+    "status": "in_progress"
+  },
+  "404 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/rollup-plugin-preserve-shebang/0.1.6",
+    "size": 1638,
+    "status": "started"
+  },
+  "405 debug pnpm:fetching-progress": {
+    "downloaded": 1638,
+    "packageId": "registry.npmjs.org/rollup-plugin-preserve-shebang/0.1.6",
+    "status": "in_progress"
+  },
+  "406 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/brotli-size/0.0.3",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "fetched"
+  },
+  "407 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/rollup-plugin-preserve-shebang/0.1.6",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "fetched"
+  },
+  "408 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@babel/code-frame/7.8.3",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/@babel/core/7.9.0",
+      "name": "@babel/code-frame",
+      "rawSpec": "^7.8.3"
+    }
+  },
+  "409 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@babel/code-frame/7.8.3",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "410 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@babel/generator/7.9.4",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/@babel/core/7.9.0",
+      "name": "@babel/generator",
+      "rawSpec": "^7.9.0"
+    }
+  },
+  "411 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@babel/generator/7.9.4",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "412 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@babel/generator/7.9.4",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "found_in_store"
+  },
+  "413 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@babel/helpers/7.9.2",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/@babel/core/7.9.0",
+      "name": "@babel/helpers",
+      "rawSpec": "^7.9.0"
+    }
+  },
+  "414 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@babel/helpers/7.9.2",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "415 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@babel/code-frame/7.8.3",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "found_in_store"
+  },
+  "416 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@babel/helper-module-transforms/7.9.0",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/@babel/core/7.9.0",
+      "name": "@babel/helper-module-transforms",
+      "rawSpec": "^7.9.0"
+    }
+  },
+  "417 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@babel/helper-module-transforms/7.9.0",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "418 debug pnpm:fetching-progress": {
+    "downloaded": 277844,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "419 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@babel/helpers/7.9.2",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "found_in_store"
+  },
+  "420 debug pnpm:fetching-progress": {
+    "downloaded": 294228,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "421 debug pnpm:fetching-progress": {
+    "downloaded": 310612,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "422 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@babel/helper-module-transforms/7.9.0",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "found_in_store"
+  },
+  "423 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@babel/helper-plugin-utils/7.8.3",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/@babel/plugin-proposal-class-properties/7.2.1",
+      "name": "@babel/helper-plugin-utils",
+      "rawSpec": "^7.0.0"
+    }
+  },
+  "424 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@babel/helper-plugin-utils/7.8.3",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "425 debug pnpm:fetching-progress": {
+    "downloaded": 326996,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "426 debug pnpm:fetching-progress": {
+    "downloaded": 343380,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "427 debug pnpm:fetching-progress": {
+    "downloaded": 359764,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "428 debug pnpm:fetching-progress": {
+    "downloaded": 376148,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "429 debug pnpm:fetching-progress": {
+    "downloaded": 392532,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "430 debug pnpm:fetching-progress": {
+    "downloaded": 408916,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "431 debug pnpm:fetching-progress": {
+    "downloaded": 425300,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "432 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/tiny-glob/0.2.6",
+    "size": 4160,
+    "status": "started"
+  },
+  "433 debug pnpm:fetching-progress": {
+    "downloaded": 4160,
+    "packageId": "registry.npmjs.org/tiny-glob/0.2.6",
+    "status": "in_progress"
+  },
+  "434 debug pnpm:fetching-progress": {
+    "downloaded": 441684,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "435 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@babel/helper-plugin-utils/7.8.3",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "found_in_store"
+  },
+  "436 debug pnpm:fetching-progress": {
+    "downloaded": 458068,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "437 debug pnpm:fetching-progress": {
+    "downloaded": 474452,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "438 debug pnpm:fetching-progress": {
+    "downloaded": 490836,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "439 debug pnpm:fetching-progress": {
+    "downloaded": 507220,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "440 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/tiny-glob/0.2.6",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "fetched"
+  },
+  "441 debug pnpm:fetching-progress": {
+    "downloaded": 268678,
+    "packageId": "registry.npmjs.org/rollup/0.67.4",
+    "status": "in_progress"
+  },
+  "442 debug pnpm:fetching-progress": {
+    "downloaded": 285062,
+    "packageId": "registry.npmjs.org/rollup/0.67.4",
+    "status": "in_progress"
+  },
+  "443 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/rollup-plugin-terser/3.0.0",
+    "size": 2499,
+    "status": "started"
+  },
+  "444 debug pnpm:fetching-progress": {
+    "downloaded": 2499,
+    "packageId": "registry.npmjs.org/rollup-plugin-terser/3.0.0",
+    "status": "in_progress"
+  },
+  "445 debug pnpm:fetching-progress": {
+    "downloaded": 301446,
+    "packageId": "registry.npmjs.org/rollup/0.67.4",
+    "status": "in_progress"
+  },
+  "446 debug pnpm:fetching-progress": {
+    "downloaded": 317830,
+    "packageId": "registry.npmjs.org/rollup/0.67.4",
+    "status": "in_progress"
+  },
+  "447 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/rollup-plugin-terser/3.0.0",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "fetched"
+  },
+  "448 debug pnpm:fetching-progress": {
+    "downloaded": 334214,
+    "packageId": "registry.npmjs.org/rollup/0.67.4",
+    "status": "in_progress"
+  },
+  "449 debug pnpm:fetching-progress": {
+    "downloaded": 350598,
+    "packageId": "registry.npmjs.org/rollup/0.67.4",
+    "status": "in_progress"
+  },
+  "450 debug pnpm:fetching-progress": {
+    "downloaded": 366982,
+    "packageId": "registry.npmjs.org/rollup/0.67.4",
+    "status": "in_progress"
+  },
+  "451 debug pnpm:fetching-progress": {
+    "downloaded": 383366,
+    "packageId": "registry.npmjs.org/rollup/0.67.4",
+    "status": "in_progress"
+  },
+  "452 debug pnpm:fetching-progress": {
+    "downloaded": 399750,
+    "packageId": "registry.npmjs.org/rollup/0.67.4",
+    "status": "in_progress"
+  },
+  "453 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/rollup-plugin-flow/1.1.1",
+    "size": 2914,
+    "status": "started"
+  },
+  "454 debug pnpm:fetching-progress": {
+    "downloaded": 2914,
+    "packageId": "registry.npmjs.org/rollup-plugin-flow/1.1.1",
+    "status": "in_progress"
+  },
+  "455 debug pnpm:fetching-progress": {
+    "downloaded": 416134,
+    "packageId": "registry.npmjs.org/rollup/0.67.4",
+    "status": "in_progress"
+  },
+  "456 debug pnpm:fetching-progress": {
+    "downloaded": 424326,
+    "packageId": "registry.npmjs.org/rollup/0.67.4",
+    "status": "in_progress"
+  },
+  "457 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/rollup-plugin-flow/1.1.1",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "fetched"
+  },
+  "458 debug pnpm:fetching-progress": {
+    "downloaded": 432518,
+    "packageId": "registry.npmjs.org/rollup/0.67.4",
+    "status": "in_progress"
+  },
+  "459 debug pnpm:fetching-progress": {
+    "downloaded": 448902,
+    "packageId": "registry.npmjs.org/rollup/0.67.4",
+    "status": "in_progress"
+  },
+  "460 debug pnpm:fetching-progress": {
+    "downloaded": 465286,
+    "packageId": "registry.npmjs.org/rollup/0.67.4",
+    "status": "in_progress"
+  },
+  "461 debug pnpm:fetching-progress": {
+    "downloaded": 477574,
+    "packageId": "registry.npmjs.org/rollup/0.67.4",
+    "status": "in_progress"
+  },
+  "462 debug pnpm:fetching-progress": {
+    "downloaded": 493958,
+    "packageId": "registry.npmjs.org/rollup/0.67.4",
+    "status": "in_progress"
+  },
+  "463 debug pnpm:fetching-progress": {
+    "downloaded": 498054,
+    "packageId": "registry.npmjs.org/rollup/0.67.4",
+    "status": "in_progress"
+  },
+  "464 debug pnpm:fetching-progress": {
+    "downloaded": 506246,
+    "packageId": "registry.npmjs.org/rollup/0.67.4",
+    "status": "in_progress"
+  },
+  "465 debug pnpm:fetching-progress": {
+    "downloaded": 514438,
+    "packageId": "registry.npmjs.org/rollup/0.67.4",
+    "status": "in_progress"
+  },
+  "466 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@babel/parser/7.9.4",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/@babel/core/7.9.0",
+      "name": "@babel/parser",
+      "rawSpec": "^7.9.0"
+    }
+  },
+  "467 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@babel/parser/7.9.4",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "468 debug pnpm:fetching-progress": {
+    "downloaded": 523604,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "469 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@babel/template/7.8.6",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/@babel/core/7.9.0",
+      "name": "@babel/template",
+      "rawSpec": "^7.8.6"
+    }
+  },
+  "470 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@babel/template/7.8.6",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "471 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@babel/parser/7.9.4",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "found_in_store"
+  },
+  "472 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@babel/template/7.8.6",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "found_in_store"
+  },
+  "473 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@babel/traverse/7.9.0",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/@babel/core/7.9.0",
+      "name": "@babel/traverse",
+      "rawSpec": "^7.9.0"
+    }
+  },
+  "474 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@babel/traverse/7.9.0",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "475 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@babel/helper-plugin-utils/7.8.3",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/@babel/plugin-syntax-jsx/7.8.3",
+      "name": "@babel/helper-plugin-utils",
+      "rawSpec": "^7.8.3"
+    }
+  },
+  "476 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/rollup-plugin-postcss/1.6.3",
+    "size": 10842,
+    "status": "started"
+  },
+  "477 debug pnpm:fetching-progress": {
+    "downloaded": 3561,
+    "packageId": "registry.npmjs.org/rollup-plugin-postcss/1.6.3",
+    "status": "in_progress"
+  },
+  "478 debug pnpm:fetching-progress": {
+    "downloaded": 7790,
+    "packageId": "registry.npmjs.org/rollup-plugin-postcss/1.6.3",
+    "status": "in_progress"
+  },
+  "479 debug pnpm:fetching-progress": {
+    "downloaded": 10842,
+    "packageId": "registry.npmjs.org/rollup-plugin-postcss/1.6.3",
+    "status": "in_progress"
+  },
+  "480 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@babel/types/7.9.0",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/@babel/core/7.9.0",
+      "name": "@babel/types",
+      "rawSpec": "^7.9.0"
+    }
+  },
+  "481 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@babel/types/7.9.0",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "482 debug pnpm:fetching-progress": {
+    "downloaded": 539988,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "483 debug pnpm:fetching-progress": {
+    "downloaded": 556372,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "484 debug pnpm:fetching-progress": {
+    "downloaded": 572756,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "485 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@babel/traverse/7.9.0",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "found_in_store"
+  },
+  "486 debug pnpm:fetching-progress": {
+    "downloaded": 584996,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "487 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/debug/4.1.1",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/@babel/core/7.9.0",
+      "name": "debug",
+      "rawSpec": "^4.1.0"
+    }
+  },
+  "488 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/debug/4.1.1",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "489 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/chalk/2.4.2",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/autoprefixer/9.7.6",
+      "name": "chalk",
+      "rawSpec": "^2.4.2"
+    }
+  },
+  "490 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/convert-source-map/1.7.0",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/@babel/core/7.9.0",
+      "name": "convert-source-map",
+      "rawSpec": "^1.7.0"
+    }
+  },
+  "491 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/convert-source-map/1.7.0",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "492 debug pnpm:fetching-progress": {
+    "downloaded": 601380,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "493 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/gensync/1.0.0-beta.1",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/@babel/core/7.9.0",
+      "name": "gensync",
+      "rawSpec": "^1.0.0-beta.1"
+    }
+  },
+  "494 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/gensync/1.0.0-beta.1",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "495 debug pnpm:fetching-progress": {
+    "downloaded": 617764,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "496 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/json5/2.1.3",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/@babel/core/7.9.0",
+      "name": "json5",
+      "rawSpec": "^2.1.2"
+    }
+  },
+  "497 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/json5/2.1.3",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "498 debug pnpm:fetching-progress": {
+    "downloaded": 522630,
+    "packageId": "registry.npmjs.org/rollup/0.67.4",
+    "status": "in_progress"
+  },
+  "499 debug pnpm:fetching-progress": {
+    "downloaded": 634148,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "500 debug pnpm:fetching-progress": {
+    "downloaded": 539014,
+    "packageId": "registry.npmjs.org/rollup/0.67.4",
+    "status": "in_progress"
+  },
+  "501 debug pnpm:fetching-progress": {
+    "downloaded": 650532,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "502 debug pnpm:fetching-progress": {
+    "downloaded": 555398,
+    "packageId": "registry.npmjs.org/rollup/0.67.4",
+    "status": "in_progress"
+  },
+  "503 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/lodash/4.17.15",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/@babel/core/7.9.0",
+      "name": "lodash",
+      "rawSpec": "^4.17.13"
+    }
+  },
+  "504 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/lodash/4.17.15",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "505 debug pnpm:fetching-progress": {
+    "downloaded": 666916,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "506 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@babel/types/7.9.0",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "found_in_store"
+  },
+  "507 debug pnpm:fetching-progress": {
+    "downloaded": 571782,
+    "packageId": "registry.npmjs.org/rollup/0.67.4",
+    "status": "in_progress"
+  },
+  "508 debug pnpm:fetching-progress": {
+    "downloaded": 683300,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "509 debug pnpm:fetching-progress": {
+    "downloaded": 579974,
+    "packageId": "registry.npmjs.org/rollup/0.67.4",
+    "status": "in_progress"
+  },
+  "510 debug pnpm:fetching-progress": {
+    "downloaded": 596358,
+    "packageId": "registry.npmjs.org/rollup/0.67.4",
+    "status": "in_progress"
+  },
+  "511 debug pnpm:fetching-progress": {
+    "downloaded": 699684,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "512 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/rollup-plugin-sizes/0.4.2",
+    "size": 5127,
+    "status": "started"
+  },
+  "513 debug pnpm:fetching-progress": {
+    "downloaded": 715,
+    "packageId": "registry.npmjs.org/rollup-plugin-sizes/0.4.2",
+    "status": "in_progress"
+  },
+  "514 debug pnpm:fetching-progress": {
+    "downloaded": 2084,
+    "packageId": "registry.npmjs.org/rollup-plugin-sizes/0.4.2",
+    "status": "in_progress"
+  },
+  "515 debug pnpm:fetching-progress": {
+    "downloaded": 3453,
+    "packageId": "registry.npmjs.org/rollup-plugin-sizes/0.4.2",
+    "status": "in_progress"
+  },
+  "516 debug pnpm:fetching-progress": {
+    "downloaded": 4822,
+    "packageId": "registry.npmjs.org/rollup-plugin-sizes/0.4.2",
+    "status": "in_progress"
+  },
+  "517 debug pnpm:fetching-progress": {
+    "downloaded": 5127,
+    "packageId": "registry.npmjs.org/rollup-plugin-sizes/0.4.2",
+    "status": "in_progress"
+  },
+  "518 debug pnpm:fetching-progress": {
+    "downloaded": 716068,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "519 debug pnpm:fetching-progress": {
+    "downloaded": 600454,
+    "packageId": "registry.npmjs.org/rollup/0.67.4",
+    "status": "in_progress"
+  },
+  "520 debug pnpm:fetching-progress": {
+    "downloaded": 616294,
+    "packageId": "registry.npmjs.org/rollup/0.67.4",
+    "status": "in_progress"
+  },
+  "521 debug pnpm:fetching-progress": {
+    "downloaded": 732452,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "522 debug pnpm:fetching-progress": {
+    "downloaded": 748836,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "523 debug pnpm:fetching-progress": {
+    "downloaded": 765220,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "524 debug pnpm:fetching-progress": {
+    "downloaded": 781604,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "525 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/convert-source-map/1.7.0",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "found_in_store"
+  },
+  "526 debug pnpm:fetching-progress": {
+    "downloaded": 785399,
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "status": "in_progress"
+  },
+  "527 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/resolve/1.15.1",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/@babel/core/7.9.0",
+      "name": "resolve",
+      "rawSpec": "^1.3.2"
+    }
+  },
+  "528 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/resolve/1.15.1",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "529 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/debug/4.1.1",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "found_in_store"
+  },
+  "530 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/gensync/1.0.0-beta.1",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "found_in_store"
+  },
+  "531 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/resolve/1.15.1",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "found_in_store"
+  },
+  "532 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/semver/5.7.1",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/@babel/core/7.9.0",
+      "name": "semver",
+      "rawSpec": "^5.4.1"
+    }
+  },
+  "533 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/semver/5.7.1",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "534 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/source-map/0.5.7",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/@babel/core/7.9.0",
+      "name": "source-map",
+      "rawSpec": "^0.5.0"
+    }
+  },
+  "535 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/source-map/0.5.7",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "536 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/slash/3.0.0",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/rollup-plugin-alias/1.5.2",
+      "name": "slash",
+      "rawSpec": "^3.0.0"
+    }
+  },
+  "537 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/slash/3.0.0",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "538 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/browserslist/4.11.1",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/autoprefixer/9.7.6",
+      "name": "browserslist",
+      "rawSpec": "^4.11.1"
+    }
+  },
+  "539 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/browserslist/4.11.1",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "540 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/semver/5.7.1",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "found_in_store"
+  },
+  "541 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/normalize-range/0.1.2",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/autoprefixer/9.7.6",
+      "name": "normalize-range",
+      "rawSpec": "^0.1.2"
+    }
+  },
+  "542 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/normalize-range/0.1.2",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "543 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/num2fraction/1.2.2",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/autoprefixer/9.7.6",
+      "name": "num2fraction",
+      "rawSpec": "^1.2.2"
+    }
+  },
+  "544 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/num2fraction/1.2.2",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "545 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/resolve/1.15.1",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/rollup-plugin-commonjs/9.3.4",
+      "name": "resolve",
+      "rawSpec": "^1.10.0"
+    }
+  },
+  "546 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/slash/3.0.0",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "found_in_store"
+  },
+  "547 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/source-map/0.5.7",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "found_in_store"
+  },
+  "548 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/rollup-plugin-postcss/1.6.3",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "fetched"
+  },
+  "549 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/browserslist/4.11.1",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "found_in_store"
+  },
+  "550 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/normalize-range/0.1.2",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "found_in_store"
+  },
+  "551 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/num2fraction/1.2.2",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "found_in_store"
+  },
+  "552 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/lodash/4.17.15",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "found_in_store"
+  },
+  "553 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/rollup/0.67.4",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "fetched"
+  },
+  "554 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/rollup-plugin-sizes/0.4.2",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "fetched"
+  },
+  "555 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "fetched"
+  },
+  "556 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/cosmiconfig/5.2.1",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/cssnano/4.1.10",
+      "name": "cosmiconfig",
+      "rawSpec": "^5.0.0"
+    }
+  },
+  "557 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/cosmiconfig/5.2.1",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "558 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/cosmiconfig/5.2.1",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "found_in_store"
+  },
+  "559 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/cssnano-preset-default/4.0.7",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/cssnano/4.1.10",
+      "name": "cssnano-preset-default",
+      "rawSpec": "^4.0.7"
+    }
+  },
+  "560 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/cssnano-preset-default/4.0.7",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "561 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/is-resolvable/1.1.0",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/cssnano/4.1.10",
+      "name": "is-resolvable",
+      "rawSpec": "^1.0.0"
+    }
+  },
+  "562 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/is-resolvable/1.1.0",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "563 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/cssnano-preset-default/4.0.7",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "found_in_store"
+  },
+  "564 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/is-resolvable/1.1.0",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "found_in_store"
+  },
+  "565 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/duplexer/0.1.1",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/gzip-size/5.1.1",
+      "name": "duplexer",
+      "rawSpec": "^0.1.1"
+    }
+  },
+  "566 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/duplexer/0.1.1",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "567 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/ansi-styles/3.2.1",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/chalk/2.4.2",
+      "name": "ansi-styles",
+      "rawSpec": "^3.2.1"
+    }
+  },
+  "568 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/ansi-styles/3.2.1",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "569 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/duplexer/0.1.1",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "found_in_store"
+  },
+  "570 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/regenerator-runtime/0.13.5",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+      "name": "regenerator-runtime",
+      "rawSpec": "^0.13.4"
+    }
+  },
+  "571 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/regenerator-runtime/0.13.5",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "572 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/duplexer/0.1.1",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/brotli-size/0.0.3",
+      "name": "duplexer",
+      "rawSpec": "^0.1.1"
+    }
+  },
+  "573 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/escape-string-regexp/1.0.5",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/chalk/2.4.2",
+      "name": "escape-string-regexp",
+      "rawSpec": "^1.0.5"
+    }
+  },
+  "574 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/escape-string-regexp/1.0.5",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "575 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/ansi-styles/3.2.1",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "found_in_store"
+  },
+  "576 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/regenerator-runtime/0.13.5",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "found_in_store"
+  },
+  "577 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/escape-string-regexp/1.0.5",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "found_in_store"
+  },
+  "578 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/supports-color/5.5.0",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/chalk/2.4.2",
+      "name": "supports-color",
+      "rawSpec": "^5.3.0"
+    }
+  },
+  "579 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/supports-color/5.5.0",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "580 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/supports-color/5.5.0",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "found_in_store"
+  },
+  "581 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/iltorb/2.4.5",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/brotli-size/0.0.3",
+      "name": "iltorb",
+      "rawSpec": "^2.0.5"
+    }
+  },
+  "582 debug pnpm:deprecation": {
+    "deprecated": "The zlib module provides APIs for brotli compression/decompression starting with Node.js v10.16.0, please use it over iltorb",
+    "depth": 2,
+    "pkgId": "registry.npmjs.org/iltorb/2.4.5",
+    "pkgName": "iltorb",
+    "pkgVersion": "2.4.5",
+    "prefix": "/Users/gngrchw/Code/lazyLoadImg"
+  },
+  "583 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/iltorb/2.4.5",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "584 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@types/resolve/0.0.8",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/rollup-plugin-node-resolve/4.2.4",
+      "name": "@types/resolve",
+      "rawSpec": "0.0.8"
+    }
+  },
+  "585 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@types/resolve/0.0.8",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "586 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/builtin-modules/3.1.0",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/rollup-plugin-node-resolve/4.2.4",
+      "name": "builtin-modules",
+      "rawSpec": "^3.1.0"
+    }
+  },
+  "587 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/builtin-modules/3.1.0",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "588 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/is-module/1.0.0",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/rollup-plugin-node-resolve/4.2.4",
+      "name": "is-module",
+      "rawSpec": "^1.0.0"
+    }
+  },
+  "589 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/is-module/1.0.0",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "590 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/iltorb/2.4.5",
+    "size": 503800,
+    "status": "started"
+  },
+  "591 debug pnpm:fetching-progress": {
+    "downloaded": 3363,
+    "packageId": "registry.npmjs.org/iltorb/2.4.5",
+    "status": "in_progress"
+  },
+  "592 debug pnpm:fetching-progress": {
+    "downloaded": 19747,
+    "packageId": "registry.npmjs.org/iltorb/2.4.5",
+    "status": "in_progress"
+  },
+  "593 debug pnpm:fetching-progress": {
+    "downloaded": 36131,
+    "packageId": "registry.npmjs.org/iltorb/2.4.5",
+    "status": "in_progress"
+  },
+  "594 debug pnpm:fetching-progress": {
+    "downloaded": 52515,
+    "packageId": "registry.npmjs.org/iltorb/2.4.5",
+    "status": "in_progress"
+  },
+  "595 debug pnpm:fetching-progress": {
+    "downloaded": 68899,
+    "packageId": "registry.npmjs.org/iltorb/2.4.5",
+    "status": "in_progress"
+  },
+  "596 debug pnpm:fetching-progress": {
+    "downloaded": 85283,
+    "packageId": "registry.npmjs.org/iltorb/2.4.5",
+    "status": "in_progress"
+  },
+  "597 debug pnpm:fetching-progress": {
+    "downloaded": 101667,
+    "packageId": "registry.npmjs.org/iltorb/2.4.5",
+    "status": "in_progress"
+  },
+  "598 debug pnpm:fetching-progress": {
+    "downloaded": 118051,
+    "packageId": "registry.npmjs.org/iltorb/2.4.5",
+    "status": "in_progress"
+  },
+  "599 debug pnpm:fetching-progress": {
+    "downloaded": 134435,
+    "packageId": "registry.npmjs.org/iltorb/2.4.5",
+    "status": "in_progress"
+  },
+  "600 debug pnpm:fetching-progress": {
+    "downloaded": 150819,
+    "packageId": "registry.npmjs.org/iltorb/2.4.5",
+    "status": "in_progress"
+  },
+  "601 debug pnpm:fetching-progress": {
+    "downloaded": 167203,
+    "packageId": "registry.npmjs.org/iltorb/2.4.5",
+    "status": "in_progress"
+  },
+  "602 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/postcss-value-parser/4.0.3",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/autoprefixer/9.7.6",
+      "name": "postcss-value-parser",
+      "rawSpec": "^4.0.3"
+    }
+  },
+  "603 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/postcss-value-parser/4.0.3",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "604 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/json5/2.1.3",
+    "size": 53809,
+    "status": "started"
+  },
+  "605 debug pnpm:fetching-progress": {
+    "downloaded": 15717,
+    "packageId": "registry.npmjs.org/json5/2.1.3",
+    "status": "in_progress"
+  },
+  "606 debug pnpm:fetching-progress": {
+    "downloaded": 183587,
+    "packageId": "registry.npmjs.org/iltorb/2.4.5",
+    "status": "in_progress"
+  },
+  "607 debug pnpm:fetching-progress": {
+    "downloaded": 199971,
+    "packageId": "registry.npmjs.org/iltorb/2.4.5",
+    "status": "in_progress"
+  },
+  "608 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/postcss-value-parser/4.0.3",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "found_in_store"
+  },
+  "609 debug pnpm:fetching-progress": {
+    "downloaded": 216355,
+    "packageId": "registry.npmjs.org/iltorb/2.4.5",
+    "status": "in_progress"
+  },
+  "610 debug pnpm:fetching-progress": {
+    "downloaded": 232739,
+    "packageId": "registry.npmjs.org/iltorb/2.4.5",
+    "status": "in_progress"
+  },
+  "611 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/@types/resolve/0.0.8",
+    "size": 2726,
+    "status": "started"
+  },
+  "612 debug pnpm:fetching-progress": {
+    "downloaded": 2726,
+    "packageId": "registry.npmjs.org/@types/resolve/0.0.8",
+    "status": "in_progress"
+  },
+  "613 debug pnpm:fetching-progress": {
+    "downloaded": 249123,
+    "packageId": "registry.npmjs.org/iltorb/2.4.5",
+    "status": "in_progress"
+  },
+  "614 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/resolve/1.15.1",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/rollup-plugin-node-resolve/4.2.4",
+      "name": "resolve",
+      "rawSpec": "^1.10.0"
+    }
+  },
+  "615 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@types/resolve/0.0.8",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "fetched"
+  },
+  "616 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/builtin-modules/3.1.0",
+    "size": 2159,
+    "status": "started"
+  },
+  "617 debug pnpm:fetching-progress": {
+    "downloaded": 2159,
+    "packageId": "registry.npmjs.org/builtin-modules/3.1.0",
+    "status": "in_progress"
+  },
+  "618 debug pnpm:fetching-progress": {
+    "downloaded": 265507,
+    "packageId": "registry.npmjs.org/iltorb/2.4.5",
+    "status": "in_progress"
+  },
+  "619 debug pnpm:fetching-progress": {
+    "downloaded": 281891,
+    "packageId": "registry.npmjs.org/iltorb/2.4.5",
+    "status": "in_progress"
+  },
+  "620 debug pnpm:fetching-progress": {
+    "downloaded": 298275,
+    "packageId": "registry.npmjs.org/iltorb/2.4.5",
+    "status": "in_progress"
+  },
+  "621 debug pnpm:fetching-progress": {
+    "downloaded": 314659,
+    "packageId": "registry.npmjs.org/iltorb/2.4.5",
+    "status": "in_progress"
+  },
+  "622 debug pnpm:fetching-progress": {
+    "downloaded": 331043,
+    "packageId": "registry.npmjs.org/iltorb/2.4.5",
+    "status": "in_progress"
+  },
+  "623 debug pnpm:fetching-progress": {
+    "downloaded": 347427,
+    "packageId": "registry.npmjs.org/iltorb/2.4.5",
+    "status": "in_progress"
+  },
+  "624 debug pnpm:fetching-progress": {
+    "downloaded": 363811,
+    "packageId": "registry.npmjs.org/iltorb/2.4.5",
+    "status": "in_progress"
+  },
+  "625 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/builtin-modules/3.1.0",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "fetched"
+  },
+  "626 debug pnpm:fetching-progress": {
+    "downloaded": 380195,
+    "packageId": "registry.npmjs.org/iltorb/2.4.5",
+    "status": "in_progress"
+  },
+  "627 debug pnpm:fetching-progress": {
+    "downloaded": 396579,
+    "packageId": "registry.npmjs.org/iltorb/2.4.5",
+    "status": "in_progress"
+  },
+  "628 debug pnpm:fetching-progress": {
+    "downloaded": 412963,
+    "packageId": "registry.npmjs.org/iltorb/2.4.5",
+    "status": "in_progress"
+  },
+  "629 debug pnpm:fetching-progress": {
+    "downloaded": 32085,
+    "packageId": "registry.npmjs.org/json5/2.1.3",
+    "status": "in_progress"
+  },
+  "630 debug pnpm:fetching-progress": {
+    "downloaded": 429347,
+    "packageId": "registry.npmjs.org/iltorb/2.4.5",
+    "status": "in_progress"
+  },
+  "631 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/is-module/1.0.0",
+    "size": 1736,
+    "status": "started"
+  },
+  "632 debug pnpm:fetching-progress": {
+    "downloaded": 1736,
+    "packageId": "registry.npmjs.org/is-module/1.0.0",
+    "status": "in_progress"
+  },
+  "633 debug pnpm:fetching-progress": {
+    "downloaded": 445731,
+    "packageId": "registry.npmjs.org/iltorb/2.4.5",
+    "status": "in_progress"
+  },
+  "634 debug pnpm:fetching-progress": {
+    "downloaded": 462115,
+    "packageId": "registry.npmjs.org/iltorb/2.4.5",
+    "status": "in_progress"
+  },
+  "635 debug pnpm:fetching-progress": {
+    "downloaded": 478499,
+    "packageId": "registry.npmjs.org/iltorb/2.4.5",
+    "status": "in_progress"
+  },
+  "636 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/is-module/1.0.0",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "fetched"
+  },
+  "637 debug pnpm:fetching-progress": {
+    "downloaded": 494883,
+    "packageId": "registry.npmjs.org/iltorb/2.4.5",
+    "status": "in_progress"
+  },
+  "638 debug pnpm:fetching-progress": {
+    "downloaded": 503800,
+    "packageId": "registry.npmjs.org/iltorb/2.4.5",
+    "status": "in_progress"
+  },
+  "639 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/chalk/1.1.3",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/rollup-plugin-bundle-size/1.0.3",
+      "name": "chalk",
+      "rawSpec": "^1.1.3"
+    }
+  },
+  "640 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/chalk/1.1.3",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "641 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/chalk/1.1.3",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "found_in_store"
+  },
+  "642 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/iltorb/2.4.5",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "fetched"
+  },
+  "643 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/buble/0.19.8",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/rollup-plugin-buble/0.19.8",
+      "name": "buble",
+      "rawSpec": "^0.19.8"
+    }
+  },
+  "644 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/buble/0.19.8",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "645 debug pnpm:fetching-progress": {
+    "downloaded": 48469,
+    "packageId": "registry.npmjs.org/json5/2.1.3",
+    "status": "in_progress"
+  },
+  "646 debug pnpm:fetching-progress": {
+    "downloaded": 53809,
+    "packageId": "registry.npmjs.org/json5/2.1.3",
+    "status": "in_progress"
+  },
+  "647 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/json5/2.1.3",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "fetched"
+  },
+  "648 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/pify/4.0.1",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/gzip-size/5.1.1",
+      "name": "pify",
+      "rawSpec": "^4.0.1"
+    }
+  },
+  "649 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/pify/4.0.1",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "650 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/fs-extra/7.0.1",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+      "name": "fs-extra",
+      "rawSpec": "7.0.1"
+    }
+  },
+  "651 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/fs-extra/7.0.1",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "652 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/resolve/1.8.1",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+      "name": "resolve",
+      "rawSpec": "1.8.1"
+    }
+  },
+  "653 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/resolve/1.8.1",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "654 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/pify/4.0.1",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "found_in_store"
+  },
+  "655 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/fs-extra/7.0.1",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "found_in_store"
+  },
+  "656 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/estree-walker/0.6.1",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/rollup-plugin-commonjs/9.3.4",
+      "name": "estree-walker",
+      "rawSpec": "^0.6.0"
+    }
+  },
+  "657 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/estree-walker/0.6.1",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "658 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/tslib/1.9.3",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+      "name": "tslib",
+      "rawSpec": "1.9.3"
+    }
+  },
+  "659 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/tslib/1.9.3",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "660 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/buble/0.19.8",
+    "size": 665999,
+    "status": "started"
+  },
+  "661 debug pnpm:fetching-progress": {
+    "downloaded": 15714,
+    "packageId": "registry.npmjs.org/buble/0.19.8",
+    "status": "in_progress"
+  },
+  "662 debug pnpm:fetching-progress": {
+    "downloaded": 32082,
+    "packageId": "registry.npmjs.org/buble/0.19.8",
+    "status": "in_progress"
+  },
+  "663 debug pnpm:fetching-progress": {
+    "downloaded": 48466,
+    "packageId": "registry.npmjs.org/buble/0.19.8",
+    "status": "in_progress"
+  },
+  "664 debug pnpm:fetching-progress": {
+    "downloaded": 64850,
+    "packageId": "registry.npmjs.org/buble/0.19.8",
+    "status": "in_progress"
+  },
+  "665 debug pnpm:fetching-progress": {
+    "downloaded": 81234,
+    "packageId": "registry.npmjs.org/buble/0.19.8",
+    "status": "in_progress"
+  },
+  "666 debug pnpm:fetching-progress": {
+    "downloaded": 97618,
+    "packageId": "registry.npmjs.org/buble/0.19.8",
+    "status": "in_progress"
+  },
+  "667 debug pnpm:fetching-progress": {
+    "downloaded": 114002,
+    "packageId": "registry.npmjs.org/buble/0.19.8",
+    "status": "in_progress"
+  },
+  "668 debug pnpm:fetching-progress": {
+    "downloaded": 130386,
+    "packageId": "registry.npmjs.org/buble/0.19.8",
+    "status": "in_progress"
+  },
+  "669 debug pnpm:fetching-progress": {
+    "downloaded": 146770,
+    "packageId": "registry.npmjs.org/buble/0.19.8",
+    "status": "in_progress"
+  },
+  "670 debug pnpm:fetching-progress": {
+    "downloaded": 163154,
+    "packageId": "registry.npmjs.org/buble/0.19.8",
+    "status": "in_progress"
+  },
+  "671 debug pnpm:fetching-progress": {
+    "downloaded": 179538,
+    "packageId": "registry.npmjs.org/buble/0.19.8",
+    "status": "in_progress"
+  },
+  "672 debug pnpm:fetching-progress": {
+    "downloaded": 195922,
+    "packageId": "registry.npmjs.org/buble/0.19.8",
+    "status": "in_progress"
+  },
+  "673 debug pnpm:fetching-progress": {
+    "downloaded": 212306,
+    "packageId": "registry.npmjs.org/buble/0.19.8",
+    "status": "in_progress"
+  },
+  "674 debug pnpm:fetching-progress": {
+    "downloaded": 228690,
+    "packageId": "registry.npmjs.org/buble/0.19.8",
+    "status": "in_progress"
+  },
+  "675 debug pnpm:fetching-progress": {
+    "downloaded": 245074,
+    "packageId": "registry.npmjs.org/buble/0.19.8",
+    "status": "in_progress"
+  },
+  "676 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/maxmin/2.1.0",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/rollup-plugin-bundle-size/1.0.3",
+      "name": "maxmin",
+      "rawSpec": "^2.1.0"
+    }
+  },
+  "677 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/maxmin/2.1.0",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "678 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/rollup-pluginutils/2.8.2",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/rollup-plugin-babel/4.4.0",
+      "name": "rollup-pluginutils",
+      "rawSpec": "^2.8.1"
+    }
+  },
+  "679 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/rollup-pluginutils/2.8.2",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "680 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/rollup-pluginutils/2.8.2",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/rollup-plugin-commonjs/9.3.4",
+      "name": "rollup-pluginutils",
+      "rawSpec": "^2.6.0"
+    }
+  },
+  "681 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/rollup-pluginutils/2.8.2",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/rollup-plugin-json/3.1.0",
+      "name": "rollup-pluginutils",
+      "rawSpec": "^2.3.1"
+    }
+  },
+  "682 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/rollup-pluginutils/2.8.2",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/rollup-plugin-buble/0.19.8",
+      "name": "rollup-pluginutils",
+      "rawSpec": "^2.3.3"
+    }
+  },
+  "683 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/rollup-pluginutils/2.3.3",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/rollup-plugin-typescript2/0.19.3",
+      "name": "rollup-pluginutils",
+      "rawSpec": "2.3.3"
+    }
+  },
+  "684 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/rollup-pluginutils/2.3.3",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "685 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@babel/code-frame/7.8.3",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/rollup-plugin-terser/3.0.0",
+      "name": "@babel/code-frame",
+      "rawSpec": "^7.0.0"
+    }
+  },
+  "686 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/estree-walker/0.6.1",
+    "size": 3261,
+    "status": "started"
+  },
+  "687 debug pnpm:fetching-progress": {
+    "downloaded": 3261,
+    "packageId": "registry.npmjs.org/estree-walker/0.6.1",
+    "status": "in_progress"
+  },
+  "688 debug pnpm:fetching-progress": {
+    "downloaded": 261458,
+    "packageId": "registry.npmjs.org/buble/0.19.8",
+    "status": "in_progress"
+  },
+  "689 debug pnpm:fetching-progress": {
+    "downloaded": 277842,
+    "packageId": "registry.npmjs.org/buble/0.19.8",
+    "status": "in_progress"
+  },
+  "690 debug pnpm:fetching-progress": {
+    "downloaded": 294226,
+    "packageId": "registry.npmjs.org/buble/0.19.8",
+    "status": "in_progress"
+  },
+  "691 debug pnpm:fetching-progress": {
+    "downloaded": 310610,
+    "packageId": "registry.npmjs.org/buble/0.19.8",
+    "status": "in_progress"
+  },
+  "692 debug pnpm:fetching-progress": {
+    "downloaded": 326994,
+    "packageId": "registry.npmjs.org/buble/0.19.8",
+    "status": "in_progress"
+  },
+  "693 debug pnpm:fetching-progress": {
+    "downloaded": 343378,
+    "packageId": "registry.npmjs.org/buble/0.19.8",
+    "status": "in_progress"
+  },
+  "694 debug pnpm:fetching-progress": {
+    "downloaded": 359762,
+    "packageId": "registry.npmjs.org/buble/0.19.8",
+    "status": "in_progress"
+  },
+  "695 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/estree-walker/0.6.1",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "fetched"
+  },
+  "696 debug pnpm:fetching-progress": {
+    "downloaded": 376146,
+    "packageId": "registry.npmjs.org/buble/0.19.8",
+    "status": "in_progress"
+  },
+  "697 debug pnpm:fetching-progress": {
+    "downloaded": 392530,
+    "packageId": "registry.npmjs.org/buble/0.19.8",
+    "status": "in_progress"
+  },
+  "698 debug pnpm:fetching-progress": {
+    "downloaded": 408914,
+    "packageId": "registry.npmjs.org/buble/0.19.8",
+    "status": "in_progress"
+  },
+  "699 debug pnpm:fetching-progress": {
+    "downloaded": 425298,
+    "packageId": "registry.npmjs.org/buble/0.19.8",
+    "status": "in_progress"
+  },
+  "700 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/typescript/3.8.3",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/microbundle/0.11.0",
+      "name": "typescript",
+      "rawSpec": ">=2.8.3"
+    }
+  },
+  "701 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/typescript/3.8.3",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "702 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/tslib/1.9.3",
+    "size": 14311,
+    "status": "started"
+  },
+  "703 debug pnpm:fetching-progress": {
+    "downloaded": 14311,
+    "packageId": "registry.npmjs.org/tslib/1.9.3",
+    "status": "in_progress"
+  },
+  "704 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/caniuse-lite/1.0.30001039",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/autoprefixer/9.7.6",
+      "name": "caniuse-lite",
+      "rawSpec": "^1.0.30001039"
+    }
+  },
+  "705 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/caniuse-lite/1.0.30001039",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "706 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/postcss/7.0.27",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/autoprefixer/9.7.6",
+      "name": "postcss",
+      "rawSpec": "^7.0.27"
+    }
+  },
+  "707 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/postcss/7.0.27",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "708 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/postcss/7.0.27",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/cssnano/4.1.10",
+      "name": "postcss",
+      "rawSpec": "^7.0.0"
+    }
+  },
+  "709 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/jest-worker/23.2.0",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/rollup-plugin-terser/3.0.0",
+      "name": "jest-worker",
+      "rawSpec": "^23.2.0"
+    }
+  },
+  "710 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/jest-worker/23.2.0",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "711 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/core-js/2.6.11",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/@babel/polyfill/7.8.7",
+      "name": "core-js",
+      "rawSpec": "^2.6.5"
+    }
+  },
+  "712 debug pnpm:deprecation": {
+    "deprecated": "core-js@<3 is no longer maintained and not recommended for usage due to the number of issues. Please, upgrade your dependencies to the actual version of core-js@3.",
+    "depth": 2,
+    "pkgId": "registry.npmjs.org/core-js/2.6.11",
+    "pkgName": "core-js",
+    "pkgVersion": "2.6.11",
+    "prefix": "/Users/gngrchw/Code/lazyLoadImg"
+  },
+  "713 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/core-js/2.6.11",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "714 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/magic-string/0.25.7",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/rollup-plugin-commonjs/9.3.4",
+      "name": "magic-string",
+      "rawSpec": "^0.25.2"
+    }
+  },
+  "715 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/magic-string/0.25.7",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "716 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/magic-string/0.22.5",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/rollup-plugin-es3/1.1.0",
+      "name": "magic-string",
+      "rawSpec": "^0.22.4"
+    }
+  },
+  "717 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/magic-string/0.22.5",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "718 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/magic-string/0.22.5",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/rollup-plugin-preserve-shebang/0.1.6",
+      "name": "magic-string",
+      "rawSpec": "^0.22.4"
+    }
+  },
+  "719 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@babel/helper-module-imports/7.8.3",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/rollup-plugin-babel/4.4.0",
+      "name": "@babel/helper-module-imports",
+      "rawSpec": "^7.0.0"
+    }
+  },
+  "720 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@babel/helper-module-imports/7.8.3",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "721 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/terser/3.17.0",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/rollup-plugin-terser/3.0.0",
+      "name": "terser",
+      "rawSpec": "^3.8.2"
+    }
+  },
+  "722 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/terser/3.17.0",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "723 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/serialize-javascript/1.9.1",
+    "wanted": {
+      "dependentId": "registry.npmjs.org/rollup-plugin-terser/3.0.0",
+      "name": "serialize-javascript",
+      "rawSpec": "^1.5.0"
+    }
+  },
+  "724 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/serialize-javascript/1.9.1",
+    "requester": "/Users/gngrchw/Code/lazyLoadImg",
+    "status": "resolved"
+  },
+  "725 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/rollup-pluginutils/2.8.2",
+    "size": 53756,
+    "status": "started"
+  },
+  "726 debug pnpm:fetching-progress": {
+    "downloaded": 3560,
+    "packageId": "registry.npmjs.org/rollup-pluginutils/2.8.2",
+    "status": "in_progress"
+  },
+  "727 debug pnpm:fetching-progress": {
+    "downloaded": 7789,
+    "packageId": "registry.npmjs.org/rollup-pluginutils/2.8.2",
+    "status": "in_progress"
+  },
+  "728 debug pnpm:fetching-progress": {
+    "downloaded": 12018,
+    "packageId": "registry.npmjs.org/rollup-pluginutils/2.8.2",
+    "status": "in_progress"
+  },
+  "729 debug pnpm:fetching-progress": {
+    "downloaded": 16247,
+    "packageId": "registry.npmjs.org/rollup-pluginutils/2.8.2",
+    "status": "in_progress"
+  },
+  "730 debug pnpm:fetching-progress": {
+    "downloaded": 20476,
+    "packageId": "registry.npmjs.org/rollup-pluginutils/2.8.2",
+    "status": "in_progress"
+  },
+  "731 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/rollup-pluginutils/2.3.3",
+    "size": 6695,
+    "status": "started"
+  },
+  "732 debug pnpm:fetching-progress": {
+    "downloaded": 6695,
+    "packageId": "registry.npmjs.org/rollup-pluginutils/2.3.3",
+    "status": "in_progress"
+  },
+  "733 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/maxmin/2.1.0",
+    "size": 2006,
+    "status": "started"
+  },
+  "734 debug pnpm:fetching-progress": {
+    "downloaded": 2006,
+    "packageId": "registry.npmjs.org/maxmin/2.1.0",
+    "status": "in_progress"
+  },
+  "735 debug pnpm:fetching-progress": {
+    "downloaded": 441682,
+    "packageId": "registry.npmjs.org/buble/0.19.8",
+    "status": "in_progress"
   }
 }

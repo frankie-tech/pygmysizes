@@ -1,26 +1,14 @@
 // @ts-check
+import { testLoading } from './test';
+/**
+ * @typedef {import('..').pygmyCfg} pygmyCfg
+ * @typedef {import('..').pygmyStates} pygmyStates
+ * @typedef {import('..').pygmyAttributes} pygmyAttributes
+ * @typedef {import('..').internal} _
+ * @typedef {import('..').utils} utils
+ */
+import utils from './utils';
 
-/**
- * @typedef {object} pygmyCfg - options for pygmysizes
- * @property {boolean} dev - is in production?
- * @property {string} selector = '.pygmy'
- * @property {number} offset
- * @property {pygmyStates} state
- * @property {pygmyAttributes} attr
- * @property {boolean} initOnLoad
- */
-/**
- * @typedef {object} pygmyStates
- * @property {string} registered
- * @property {string} loading
- * @property {string} loaded
- * @property {string} fail
- */
-/**
- * @typedef {object} pygmyAttributes
- * @property {string} src
- * @property {string} srcset
- */
 /**
  * @typedef {object} pygmyOn
  * @property {pygmyCallback} loaded
@@ -34,9 +22,9 @@
 var pygmysizes;
 !(function () {
 	'use strict';
-	const _ = {};
+	const _ = Object.assign({}, utils);
 
-	/** @type {object} */
+	/** @type {pygmyCfg} */
 	_.defaults = Object.freeze({
 		selector: '.pygmy', // dom selector string /
 		offset: 100, // offset in pixels where an image should be loaded /,
@@ -51,7 +39,7 @@ var pygmysizes;
 			srcset: 'data-srcset',
 		},
 		initOnLoad: true,
-		on: _.on,
+		on: {},
 		dev: false,
 	});
 
@@ -66,63 +54,34 @@ var pygmysizes;
 					msg: `Element`,
 				},
 			});
-			_.observer.unobserve(el);
+			_.o.unobserve(el);
 			el.dispatchEvent(e);
 		},
 	};
-
 	/** @type {pygmyCfg} */
-	_.config = window['pygmyCfg'] = Object.assign(
+	_.config = Object.assign(_.config, {}, _.defaults, window['pygmyCfg']);
+	/** @type {pygmyCfg} */
+	/*
+    _.config = window['pygmyCfg'] = Object.assign(
 		{},
 		_.defaults,
 		window['pygmyCfg']
 	);
-
-	/** @type {Array.<HTMLImageElement>} */
+    */
 	_.elements = [];
 
-	/** @type {boolean} */
 	_.loadingSupported = 'loading' in HTMLImageElement;
 
-	/** @type {IntersectionObserver} */
-	_.observer;
-
-	_.id = function () {
-		return `_${Math.random().toString(36).substr(2, 9)}`;
-	};
-	/**
-	 * @param {string} msg
-	 * @returns {string}
-	 */
-	_.warn = function (msg) {
-		_.config.dev && console.warn(msg);
-		return '';
-	};
 	/** @param {IntersectionObserverEntry} el */
 	_.inView = function (el) {
 		console.log(el, el.intersectionRatio);
 	};
-	/* https://locutus.io/php/var/empty/ */
-	/**
-	 * @param {string|boolean|number|object} test
-	 */
-	_.empty = function empty(test) {
-		const isAnEmptyValue = [undefined, null, false, 0, '', '0'].includes(test);
 
-		if (isAnEmptyValue) return true;
-		if (test.pop) return test.length === 0 ? true : false;
-		if (test instanceof Object) {
-			// @ts-ignore
-			return Object.entries(test).length === 0 ? true : false;
-		}
-
-		return false;
-	};
 	/**
 	 * @param {HTMLImageElement} el - image element to set the state of
 	 * @param {string} state - string attribute to set
 	 */
-	_.setState = function (el, state) {
+	_.set = function (el, state) {
 		const { registered } = _.config.state;
 		if (state === registered) {
 			let id = _.id();
@@ -136,17 +95,21 @@ var pygmysizes;
 	/**
 	 * @param {HTMLImageElement} el
 	 * @param {string} attr
-	 * @returns {string} attrValue
+	 * @returns {string|false} attrValue
 	 */
 	_.getAttr = function (el, attr) {
 		const attrExists = el.hasAttribute(attr);
-		if (!attrExists) return _.warn(`Attribute (${attr}) is not present`);
+		if (!attrExists)
+			return _.warn(`Attribute (${attr}) is not present`, _.config.dev);
 
 		const attrValue = el.getAttribute(attr);
 		const attrEmpty = _.empty(attrValue);
 
 		if (attrEmpty)
-			return _.warn(`Attribute (${attr}) present, but has no value`);
+			return _.warn(
+				`Attribute (${attr}) present, but has no value`,
+				_.config.dev
+			);
 
 		return attrValue;
 	};
@@ -156,7 +119,7 @@ var pygmysizes;
 	 */
 	_.setLoading = function (el) {
 		const { loading } = _.config.state;
-		_.setState(el, loading);
+		_.set(el, loading);
 		_.watchElLoaded(el);
 		return el;
 	};
@@ -168,14 +131,14 @@ var pygmysizes;
 	_.watchElLoaded = function (el, cb = () => {}) {
 		const { loaded, fail } = _.config.state;
 		if (el.complete) {
-			_.setState(el, loaded);
+			_.set(el, loaded);
 			return cb(el);
 		}
 		el.addEventListener('load', () => cb(el), { once: true });
 		el.addEventListener(
 			'error',
 			function () {
-				_.setState(el, fail);
+				_.set(el, fail);
 			},
 			{ once: true }
 		);
@@ -194,9 +157,9 @@ var pygmysizes;
 		const imagesLength = images.length;
 		var i;
 		for (i = 0; i < imagesLength; i += 1) {
-			_.setState(images[i], registered);
+			_.set(images[i], registered);
 			_.elements.push(images[i]);
-			images[i].addEventListener('pygmy::loaded', (e) => console.log(e.detail));
+			images[i].addEventListener('pygmy::loaded', testLoading);
 		}
 	};
 
@@ -210,9 +173,11 @@ var pygmysizes;
 
 		const currSrc = _.getAttr(el, src);
 		const currSrcset = _.getAttr(el, srcset);
+
 		_.setLoading(el);
-		el.setAttribute('src', currSrc);
-		el.setAttribute('srcset', currSrcset);
+
+		if (currSrc) el.setAttribute('src', currSrc);
+		if (currSrcset) el.setAttribute('srcset', currSrcset);
 
 		return el;
 	};
@@ -228,4 +193,5 @@ var pygmysizes;
 
 	return pygmysizes;
 })();
+
 export default pygmysizes;
