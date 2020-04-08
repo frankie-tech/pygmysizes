@@ -2,6 +2,7 @@
 
 /**
  * @typedef {object} pygmyCfg - options for pygmysizes
+ * @property {boolean} dev - is in production?
  * @property {string} selector = '.pygmy'
  * @property {number} offset
  * @property {pygmyStates} state
@@ -50,10 +51,25 @@ var pygmysizes;
 			srcset: 'data-srcset',
 		},
 		initOnLoad: true,
-		on: {
-			loaded: () => {},
-		},
+		on: _.on,
+		dev: false,
 	});
+
+	_.on = {
+		/** @param {HTMLImageElement} el */
+		loaded: (el) => {
+			const e = new CustomEvent('pygmy::loaded', {
+				detail: {
+					time: new Date(),
+					el: el,
+					id: el.dataset.pygmy,
+					msg: `Element`,
+				},
+			});
+			_.observer.unobserve(el);
+			el.dispatchEvent(e);
+		},
+	};
 
 	/** @type {pygmyCfg} */
 	_.config = window['pygmyCfg'] = Object.assign(
@@ -71,6 +87,17 @@ var pygmysizes;
 	/** @type {IntersectionObserver} */
 	_.observer;
 
+	_.id = function () {
+		return `_${Math.random().toString(36).substr(2, 9)}`;
+	};
+	/**
+	 * @param {string} msg
+	 * @returns {string}
+	 */
+	_.warn = function (msg) {
+		_.config.dev && console.warn(msg);
+		return '';
+	};
 	/** @param {IntersectionObserverEntry} el */
 	_.inView = function (el) {
 		console.log(el, el.intersectionRatio);
@@ -96,6 +123,12 @@ var pygmysizes;
 	 * @param {string} state - string attribute to set
 	 */
 	_.setState = function (el, state) {
+		const { registered } = _.config.state;
+		if (state === registered) {
+			let id = _.id();
+			el.setAttribute(state, id);
+			return el;
+		}
 		el.setAttribute(state, '');
 		return el;
 	};
@@ -107,21 +140,17 @@ var pygmysizes;
 	 */
 	_.getAttr = function (el, attr) {
 		const attrExists = el.hasAttribute(attr);
-		if (!attrExists) throw Error('Attribute is not present');
+		if (!attrExists) return _.warn(`Attribute (${attr}) is not present`);
 
 		const attrValue = el.getAttribute(attr);
 		const attrEmpty = _.empty(attrValue);
 
-		if (attrEmpty) throw Error('Attribute present, but has no value');
+		if (attrEmpty)
+			return _.warn(`Attribute (${attr}) present, but has no value`);
 
 		return attrValue;
 	};
 
-	/**
-	 * @param {HTMLImageElement} el
-	 * @param {Array.<string>} arr
-	 */
-	_.hasAttrs = function (el, arr) {};
 	/**
 	 * @param {HTMLImageElement} el - image element that has not been loaded yet
 	 */
@@ -161,13 +190,13 @@ var pygmysizes;
 		} = _.config;
 		/** @type {NodeListOf<HTMLImageElement>} */
 		const images = document.querySelectorAll(selector);
-		console.log(images);
-		console.log(images[0]);
+
 		const imagesLength = images.length;
 		var i;
 		for (i = 0; i < imagesLength; i += 1) {
 			_.setState(images[i], registered);
 			_.elements.push(images[i]);
+			images[i].addEventListener('pygmy::loaded', (e) => console.log(e.detail));
 		}
 	};
 
@@ -184,11 +213,13 @@ var pygmysizes;
 		_.setLoading(el);
 		el.setAttribute('src', currSrc);
 		el.setAttribute('srcset', currSrcset);
+
+		return el;
 	};
 
 	$.init = function () {
 		$.registerElements();
-		// setTimeout(() => _.elements.forEach((img) => $.loadImage(img)), 3000);
+		setTimeout(() => _.elements.forEach((img) => $.loadImage(img)), 3000);
 	};
 
 	window['requestIdleCallback']($.init);
