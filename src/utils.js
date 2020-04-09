@@ -1,20 +1,15 @@
+/** @typedef {import('..').utils} utils */
+/** @type {utils} */
 const utils = {};
 
 utils.id = () => `_${Math.random().toString(36).substr(2, 9)}`;
-/**
- * @param {string} msg
- * @param {boolean} [warn]
- * @returns {false}
- */
+
 utils.warn = (msg, warn) => {
 	warn && console.warn(msg);
 	return false;
 };
+
 /* https://locutus.io/php/var/empty/ */
-/**
- * @param {string|boolean|number|object} test
- * @return {boolean}
- */
 utils.empty = (test) => {
 	const isAnEmptyValue = [undefined, null, false, 0, '', '0'].includes(test);
 
@@ -27,12 +22,7 @@ utils.empty = (test) => {
 
 	return false;
 };
-/**
- * @param {HTMLElement} el
- * @param {string} type
- * @param {object} detail
- * @return {HTMLElement} el
- */
+
 utils.emit = (el, type, detail) => {
 	const e = new CustomEvent(type, {
 		bubbles: true,
@@ -40,6 +30,10 @@ utils.emit = (el, type, detail) => {
 	});
 	el.dispatchEvent(e);
 	return el;
+};
+
+utils.inView = (el) => {
+	console.log(el, el.intersectionRatio);
 };
 
 export default utils;

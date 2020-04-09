@@ -10,16 +10,27 @@
 				width: 500px;
 			}
 		</style>
+		<script>
+			window.pygmyCfg = {
+				state: {},
+			};
+		</script>
 	</head>
 	<body>
 		<main id="app"></main>
 		<script>
+			window.imagesLoaded = 0;
 			const app = document.getElementById('app');
 			const frag = document.createDocumentFragment();
+			var loading = 'eager';
 			for (let i = 0; i < 250; i += 1) {
 				const img = document.createElement('img');
 				img.dataset.src = `https://placehold.it/500x500/?text=${i}`;
 				img.classList.add('pygmy');
+				if (i > 100) {
+					loading = 'lazy';
+				}
+				img.setAttribute('loading', loading);
 				img.setAttribute('height', 500);
 				img.setAttribute('width', 500);
 				frag.appendChild(img);

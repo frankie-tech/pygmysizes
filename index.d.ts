@@ -1,5 +1,3 @@
-import { pygmyAttributes } from './src';
-
 /** Config Interface */
 interface pygmyCfg {
     dev: boolean;
@@ -28,26 +26,21 @@ export { pygmyAttributes, pygmyCfg, pygmyStates };
 /** Internal Interface */
 
 interface utils {
-    id: function;
-    warn: function;
-    empty: function;
-    emit: function;
-    getAttr: function;
-}
-
-interface manipulateState {
-    set: function,
-    setLoading: function,
+    warn: (msg: string, warn: boolean) => false;
+    empty: (test: any) => boolean;
+    emit: (el: HTMLElement, type: string, detail?: object) => HTMLElement;
+    inView: (el: IntersectionObserverEntry) => void;
+    id: () => string;
 }
 
 interface internal extends utils {
-    defaults: object;
+    defaults: pygmyCfg;
     config: pygmyCfg;
     elements: Array.<HTMLImageElement>;
     loadingSupported: boolean;
-    on: object;
-    inView: function;
-    set: function;
+    remove: (el: HTMLElement, state: string) => HTMLElement;
+    getAttr: (el: HTMLElement, attr: string) => string | false;
+    set: (el: HTMLElement, state: string, val?: string) => HTMLElement;
 }
 
 
