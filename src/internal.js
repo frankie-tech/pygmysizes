@@ -3,7 +3,7 @@ import utils from './utils';
 /** @type {internal} */
 const internal = { ...utils };
 
-internal.defaults = {
+internal.config = {
 	selector: '.pygmy', // dom selector string /
 	offset: 100, // offset in pixels where an image should be loaded /,
 	state: {
@@ -21,17 +21,20 @@ internal.defaults = {
 	dev: false,
 };
 
+internal.intersecting = new Event('pygmy::intersecting', {
+	detail: {
+		time: new Date(),
+	},
+});
+
 internal.isRegistered = (el) =>
 	el.hasAttribute(internal.config.state.registered);
-
-internal.config = {};
 
 internal.elements = [];
 
 internal.loadingSupported = 'loading' in HTMLImageElement;
 
 internal.set = function (el, state, val) {
-	console.log(el, state);
 	el.setAttribute(state, val || '');
 	return el;
 };
@@ -51,6 +54,41 @@ internal.getAttr = function (el, attr) {
 		return utils.warn(`Attribute (${attr}) present, but has no value`);
 
 	return attrValue;
+};
+
+internal.merge = function (target) {
+	function obj(target, source) {
+		Object.keys(source).forEach(function (key) {
+			target[key] = values(target[key], source[key]);
+		});
+		return target;
+	}
+	function arr(target, source) {
+		source.forEach(function (item, index) {
+			target[index] = values(target[index], item);
+		});
+		return target;
+	}
+	/* Blame closure compiler */
+	function values(target, source) {
+		return '[object Object]' === Object.prototype.toString.call(target) &&
+			'[object Object]' === Object.prototype.toString.call(source)
+			? obj(target, source)
+			: '[object Array]' === Object.prototype.toString.call(target) &&
+			  '[object Array]' === Object.prototype.toString.call(source)
+			? arr(target, source)
+			: void 0 === source
+			? target
+			: source;
+	}
+
+	for (var sources = [], index = 1; index < arguments.length; ++index) {
+		sources[index - 1] = arguments[index];
+	}
+	sources.forEach(function (argument) {
+		return values(target, argument);
+	});
+	return target;
 };
 
 export default internal;
