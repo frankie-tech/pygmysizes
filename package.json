@@ -1,16 +1,16 @@
 {
 	"name": "pygmysizes",
 	"version": "0.0.1",
-	"description": "lightweight lazyloading option",
+	"description": "lightweight lazyloading \"library\"",
 	"source": "src/index.js",
 	"main": "dist/index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"dev": "microbundle watch -f iife --compress=false",
-		"build": "microbundle -f iife --terser"
+		"dev": "microbundle watch -f iife",
+		"build": "microbundle -f iife"
 	},
-	"author": "",
-	"license": "ISC",
+	"author": "frankie-tech",
+	"license": "MIT",
 	"devDependencies": {
 		"microbundle": "^0.11.0"
 	}
