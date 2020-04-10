@@ -34,13 +34,14 @@ interface utils {
 }
 
 interface internal extends utils {
-    defaults: pygmyCfg;
+    intersecting: Event;
     config: pygmyCfg;
     elements: Array.<HTMLImageElement>;
     loadingSupported: boolean;
     remove: (el: HTMLElement, state: string) => HTMLElement;
     getAttr: (el: HTMLElement, attr: string) => string | false;
     set: (el: HTMLElement, state: string, val?: string) => HTMLElement;
+    merge: (target: pygmyCfg, ...sources: object[]) => pygmyCfg;
 }
 
 
