@@ -40,8 +40,8 @@
 			for (let i = 0; i < 50; i += 1) {
 				const img = document.createElement('img');
 				img.dataset.src = `https://placehold.it/500x500/?text=${i}`;
+				img.dataset.srcset = `https://placehold.it/600x600/?text=srcset+${i}`;
 				img.classList.add('pygmy');
-				const randColor = () => Math.round(Math.random() * 255);
 				img.setAttribute('height', '500px');
 				img.setAttribute('width', '500px');
 				frag.appendChild(img);
