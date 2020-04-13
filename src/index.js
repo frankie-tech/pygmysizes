@@ -9,11 +9,16 @@
 /** @type {internal} */
 import internal from './internal';
 
+import pubsub from './pubsub';
+
 var pygmysizes;
 !(function () {
 	'use strict';
 
 	const $ = {};
+
+	$.pubsub = pubsub;
+
 	$.config = internal.merge(internal.config, window['pygmyCfg']);
 	/**
 	 * @param {HTMLImageElement} el
@@ -36,19 +41,22 @@ var pygmysizes;
 		);
 	};
 
+	/** @param {Array.<HTMLImageElement>} elements*/
 	$.observer = function (elements) {
 		const io = observerInit(elements);
 		return io;
 
+		/** @param {Array.<HTMLImageElement>} elements */
 		function observerInit(elements) {
 			const observer = new IntersectionObserver(observerCallback, {
 				root: null,
-				rootMargin: '100px 0',
+				rootMargin: '100px 0px',
 			});
 			[...elements].forEach((element) => observer.observe(element));
 			return observer;
 		}
 
+		/** @param {Array.<IntersectionObserverEntry>} entries*/
 		function observerCallback(entries) {
 			return entries.forEach(isIntersecting);
 		}
@@ -58,11 +66,22 @@ var pygmysizes;
 			if (entry.intersectionRatio <= 0) return;
 			// @ts-ignore
 			entry.target.dataset.observerEntry = 'intersecting';
-			entry.target.dispatchEvent(internal.intersecting);
+
+			$.pubsub.publish('intersecting', {
+				target: entry.target,
+				state: 'loading',
+			});
+
 			io.unobserve(entry.target);
 			return;
 		}
 	};
+
+	$.pubsub.subscribe('intersecting', $.loadImage);
+
+	$.pubsub.subscribe('loading', internal.set);
+
+	$.pubsub.subscribe('loaded', internal.set);
 
 	$.registerElements = function () {
 		const {
@@ -81,16 +100,7 @@ var pygmysizes;
 			internal.set(images[i], registered, internal.id());
 			internal.elements.push(images[i]);
 			$.observer(internal.elements);
-			images[i].addEventListener(
-				'load',
-				() => {
-					window['imagesLoaded'] += 1;
-				},
-				{
-					capture: true,
-					once: true,
-				}
-			);
+
 			images[i].addEventListener(
 				'pygmy::intersecting',
 				// @ts-ignore
@@ -108,13 +118,10 @@ var pygmysizes;
 	$.loadImage = function (el) {
 		const {
 			attr: { src, srcset },
-			state: { loading },
 		} = internal.config;
-
+		internal.set(el, 'loading');
 		const currSrc = internal.getAttr(el, src);
 		const currSrcset = internal.getAttr(el, srcset);
-
-		internal.set(el, loading);
 
 		if (currSrc) el.setAttribute('src', currSrc);
 		if (currSrcset) el.setAttribute('srcset', currSrcset);
