@@ -34,8 +34,10 @@ internal.elements = [];
 
 internal.loadingSupported = 'loading' in HTMLImageElement;
 
-internal.set = function (el, state, val) {
-	el.setAttribute(state, val || '');
+internal.set = function (el, state, val, remove) {
+	const { state: stateConfig } = internal.config;
+	el.setAttribute(stateConfig[state], val || '');
+	if (remove !== undefined) el.removeAttribute(stateConfig[state]);
 	return el;
 };
 
