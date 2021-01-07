@@ -25,8 +25,8 @@
 			}
 		</style>
 		<script>
-			window.pygmyCfg = {
-				selector: '.pygmy',
+			window.pygmyConfig = {
+				selector: '[data-pygmy]',
 			};
 		</script>
 	</head>
@@ -40,7 +40,7 @@
 			for (let i = 0; i < 50; i += 1) {
 				const img = document.createElement('img');
 
-				img.loading = 'lazy';
+				// img.loading = 'lazy';
 
 				img.dataset.pygmyset = `https://placehold.it/150/?text=srcset+${i}`;
 				img.dataset.pygmy = `https://placehold.it/150/?text=${i}`;
