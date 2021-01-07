@@ -1,6 +1,7 @@
 /** Image */
-type pygmyImage = HTMLImageElement & {
+type pygmyImage = {
 	isComplete: boolean;
+	element: HTMLImageElement;
 }
 
 /*
