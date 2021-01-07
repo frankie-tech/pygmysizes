@@ -4,37 +4,32 @@ A micro sized lazyloading image "library"
 
 ## Foreword
 
-pygmysizes (named after the pygmy sloth) is not meant to be a full replacement of lazysizes. It is the all in one option for lazyloading and fits most use cases. You probably just wanna use lazysizes honestly.
+pygmysizes (named after the pygmy sloth) is a lazySizes mimic that offers only the skeleton of features that lazySizes offers. The only core system passed on is the events and ability to create plugins. **Plugin is subject to change**
 
 ## Goals
 
-- self initializing
-- standards compliant
-- 60fps/jank free
-- no impact to SEO
-- use modern code
-- size budget: ~10kb
+-   self initializing
+-   standards compliant
+-   60fps/jank free
+-   no impact to SEO
+-   use modern code
+-   size budget: ~1kb (ungzipped)
 
 ## Outline
 
-- handle settings
-- register all pygmy el
-- check for native support
-  - if support, change all data- attributes to std attributes
-  - exit
-- set up intersection observer
-- on intersect
-  - swap data attribute with attribute
-  - apply appropriate class (look more into SM?)
-  - on load
-    - remove event listener
-    - add loaded class
+-   handle settings from a window config object
+-   register all pygmy el using `loading="lazy"` making it a first class citizen
+-   option to automatically add transparent gif hack
+-   set up intersection observer
+-   mimic class loading management of lazySizes to take advantage of some transition effects
 
 ## API Outline
 
-`data-src` string: link to the image file
+`data-pygmy`: link to the image file
 
-`data-srcset` string: valid srcset string
+`data-pygmyset`: valid srcset string
+
+`data-pygmyload`: empty attribute will preload image after `pageshow` event.
 
 On init: pygmysizes will register each img/element with `data-pygmy` if it is not in viewport.
 
