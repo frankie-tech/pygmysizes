@@ -17,7 +17,7 @@ type pygmyImage = HTMLImageElement & {
 }
 */
 
-interface pygmyCfg {
+type pygmyConfig = {
 	selector: string;
 	src: string;
 	srcset: string;
@@ -29,14 +29,23 @@ interface pygmyCfg {
 	}
 }
 
-declare type pygmySizes = {
+
+type pygmySizes = {
 	elements: Set<pygmyImage>;
 	config: pygmyCfg;
 }
 
+declare global {
+	interface Window {
+		pygmyConfig: pygmyConfig;
+		pygmySizes: pygmySizes;
+	}
+}
+
 export {
 	pygmyImage,
-	pygmySizes
+	pygmySizes,
+	pygmyConfig
 }
 
 /** Config Interface */
