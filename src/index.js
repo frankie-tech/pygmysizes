@@ -1,7 +1,57 @@
 // @ts-check
 
+/**
+ * @typedef {import('..').pygmyImage} pygmyImage
+ * @typedef {import('..').pygmySizes} pygmySizes
+ */
+
+// @ts-ignore
+const config = Object.assign(window.pygmyConfig || {}, {
+	selector: '[loading="lazy"]',
+	src: 'pygmy',
+	srcset: 'pygmyset',
+	sizes: 'pygmysizes',
+	preload: 'pygmyload',
+	observer: {
+		rootMargin: '0px',
+		threshold: 0,
+	}
+});
+
+/**
+ * 
+ * @param {pygmyImage} element 
+ */
+function loadElement(element) {
+	element.setAttribute('src', element.dataset[config.src]);
+	if (element.dataset[config.srcset] !== undefined) {
+		element.setAttribute('srcset', element.dataset[config.srcset]);
+		element.setAttribute('sizes', element.dataset[config.sizes] || '');
+	}
+	element.isLoading = false;
+}
 
 
+function pygmySizesCore(window) {
+	/** @type {Set<pygmyImage>} */
+	const elements = new Set(...document.body.querySelectorAll(config.selector));
+
+	/**
+	 * @type {pygmySizes} instance
+	 */
+	const instance = {
+		config,
+		elements,
+	}
+	window.pygmySizes = instance;
+
+	if ('loading' in HTMLImageElement.prototype) {
+		elements.forEach(loadElement);
+		return instance;
+	}
+}
+
+export default pygmySizesCore(window)
 
 
 
@@ -14,8 +64,8 @@
  * @typedef {import('..').pygmyStates} pygmyStates
  * @typedef {import('..').pygmyAttributes} pygmyAttributes
  * @typedef {import('..').internal} internal
- * 
-// /** @type {internal} 
+ *
+// /** @type {internal}
 
 import internal from './internal';
 
@@ -31,9 +81,9 @@ var pygmysizes;
 
 	$.config = internal.merge(internal.config, window['pygmyCfg']);
 	// /**
-	 * @param {HTMLImageElement} el
-	 * @param {function} [cb]
-	 
+	 // * @param {HTMLImageElement} el
+	 // * @param {function} [cb]
+
 	$.watchElLoaded = function (el, cb = () => {}) {
 		const { loaded, fail, loading } = internal.config.state;
 		if (el.complete) {
@@ -51,12 +101,12 @@ var pygmysizes;
 		);
 	};
 
-	/** @param {Array.<HTMLImageElement>} elements*/
+	// /** @param {Array.<HTMLImageElement>} elements
 $.observer = function (elements) {
 	const io = observerInit(elements);
 	return io;
 
-	// /** @param {Array.<HTMLImageElement>} elements 
+	// /** @param {Array.<HTMLImageElement>} elements
 	function observerInit(elements) {
 		const observer = new IntersectionObserver(observerCallback, {
 			root: null,
@@ -66,12 +116,12 @@ $.observer = function (elements) {
 		return observer;
 	}
 
-	// /** @param {Array.<IntersectionObserverEntry>} entries 
+	// /** @param {Array.<IntersectionObserverEntry>} entries
 	function observerCallback(entries) {
 		return entries.forEach(isIntersecting);
 	}
 
-	// /** @param {IntersectionObserverEntry} entry 
+	// /** @param {IntersectionObserverEntry} entry
 	function isIntersecting(entry) {
 		if (entry.intersectionRatio <= 0) return;
 		// @ts-ignore
@@ -99,7 +149,7 @@ $.registerElements = function () {
 		state: { registered },
 	} = internal.config;
 	// const loadingSupported = internal.loadingSupported;
-	// /** @type {NodeListOf<HTMLImageElement>} 
+	// /** @type {NodeListOf<HTMLImageElement>}
 	const images = document.querySelectorAll(selector);
 
 	const imagesLength = images.length;
