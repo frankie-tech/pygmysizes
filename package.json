@@ -2,12 +2,13 @@
 	"name": "pygmysizes",
 	"version": "0.0.1",
 	"description": "lightweight lazyloading",
-	"source": "src/index.js",
-	"main": "dist/index.js",
+	"main": "./dist/index.umd.js",
+	"module": "./dist/index.module.js",
+	"exports": "./dist/index.modern.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"dev": "microbundle watch -f iife",
-		"build": "microbundle -f iife"
+		"dev": "microbundle watch src/index.js --name=pygmySizes --no-compress",
+		"bundle": "microbundle src/index.js --name=pygmySizes"
 	},
 	"author": "frankie-tech",
 	"license": "MIT",
