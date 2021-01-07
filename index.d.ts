@@ -33,7 +33,7 @@ type pygmyConfig = {
 
 
 type pygmySizes = {
-	elements: Set<pygmyImage>;
+	elements: Map<HTMLImageElement, pygmyImage>;
 	config: pygmyCfg;
 }
 
