@@ -45,6 +45,8 @@
 				img.dataset.pygmyset = `https://placehold.it/150/?text=srcset+${i}`;
 				img.dataset.pygmy = `https://placehold.it/150/?text=${i}`;
 
+				if (i > 40) img.dataset.pygmyload = true;
+
 				img.setAttribute('height', '500px');
 				img.setAttribute('width', '500px');
 				frag.appendChild(img);
