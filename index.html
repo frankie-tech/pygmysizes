@@ -39,16 +39,19 @@
 			// var loading = 'eager';
 			for (let i = 0; i < 50; i += 1) {
 				const img = document.createElement('img');
-				img.dataset.src = `https://placehold.it/500x500/?text=${i}`;
-				img.dataset.srcset = `https://placehold.it/600x600/?text=srcset+${i}`;
-				img.classList.add('pygmy');
+
+				img.loading = 'lazy';
+
+				img.dataset.pygmyset = `https://placehold.it/150/?text=srcset+${i}`;
+				img.dataset.pygmy = `https://placehold.it/150/?text=${i}`;
+
 				img.setAttribute('height', '500px');
 				img.setAttribute('width', '500px');
 				frag.appendChild(img);
 			}
 			app.appendChild(frag);
 		</script>
-		<script src="dist/index.js"></script>
+		<script src="./dist/index.umd.js"></script>
 		<script></script>
 	</body>
 </html>
