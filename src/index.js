@@ -1,11 +1,9 @@
 // @ts-check
-
 /**
  * @typedef {import('..').pygmyImage} pygmyImage
  * @typedef {import('..').pygmySizes} pygmySizes
  * @typedef {import('..').pygmyConfig} pygmyConfig
  */
-
 const config = Object.assign(window.pygmyConfig || {}, {
 	selector: '[loading="lazy"]',
 	src: 'pygmy',
@@ -17,6 +15,7 @@ const config = Object.assign(window.pygmyConfig || {}, {
 		threshold: 0,
 	}
 });
+
 /**
  * @param {any[]} arr
  * @param {number} size
@@ -24,44 +23,46 @@ const config = Object.assign(window.pygmyConfig || {}, {
  */
 const chunk = (arr, size) => arr.reduce((acc, e, i) => (i % size ? acc[acc.length - 1].push(e) : acc.push([e]), acc), []);
 
+// @ts-ignore
+const raf = fn => (...args) => requestAnimationFrame(() => fn(...args));
+
 /**
- * 
- * @param {pygmyImage} element 
+ * @param {HTMLElement} element
  * @param  {...string} attrs 
  */
 const setAttr = (element, ...attrs) => chunk(attrs, 2).reduce((_, curr, i, a) => [i === 1 ? (element.setAttribute(_[0], _[1]), element.setAttribute(curr[0], curr[1])) : element.setAttribute(curr[0], curr[1])]);
 
-/**  @param {pygmyImage} element */
-function loadElement(element) {
-	requestAnimationFrame(() => {
-		setAttr(element, 'src', element.dataset[config.src], 'srcset', element.dataset[config.srcset] || '', 'sizes', element.dataset[config.sizes] || '');
-		/*
-		element.setAttribute('src', element.dataset[config.src]);
-		if (element.dataset[config.srcset] !== undefined) {
-			element.setAttribute('srcset', element.dataset[config.srcset]);
-			element.setAttribute('sizes', element.dataset[config.sizes] || '');
-		}
-		*/
-		element.isLoading = false;
-	});
+/**  @param {pygmyImage} param */
+function loadImage({ element, isComplete }) {
+	setAttr(element, 'src', element.dataset[config.src], 'srcset', element.dataset[config.srcset] || '', 'sizes', element.dataset[config.sizes] || '');
 }
 
-/** @param {Window} window */
-function pygmySizesCore(window) {
-	/** @type {Set<pygmyImage>} */
-	const elements = new Set(document.querySelectorAll(config.selector));
+/**
+ * @param {string} selector
+ * @returns Set<pygmyImage>
+ */
+function queueElements(selector) {
+	const elements = [...document.body.querySelectorAll(selector)].map((/** @type {HTMLImageElement} - element */ element) => ({ isComplete: element.complete || false, element }));
 
-	/** @type {pygmySizes} */
-	const instance = {
-		config,
-		elements,
-	}
-	window.pygmySizes = instance;
+	// add delegated listener to window
+
+	// check if image is complete
+
+	return new Set(elements);
+}
+
+function pygmySizesCore() {
+	const elements = queueElements(config.selector);
 
 	if ('loading' in HTMLImageElement.prototype) {
-		elements.forEach(loadElement);
-		return instance;
+		elements.forEach(raf(loadImage));
+		return {
+			config,
+			elements,
+		}
 	}
 }
 
-export default pygmySizesCore(window)
+pygmySizes = pygmySizesCore();
+
+export default pygmySizes;
