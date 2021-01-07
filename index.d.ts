@@ -37,6 +37,7 @@ type pygmySizes = {
 }
 
 declare global {
+	var pygmySizes: pygmySizes;
 	interface Window {
 		pygmyConfig: pygmyConfig;
 		pygmySizes: pygmySizes;
