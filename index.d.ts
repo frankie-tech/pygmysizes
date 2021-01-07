@@ -1,5 +1,6 @@
 /** Image */
 type pygmyImage = {
+	rpc: number;
 	isComplete: boolean;
 	element: HTMLImageElement;
 }

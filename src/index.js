@@ -16,6 +16,8 @@ const config = Object.assign(window.pygmyConfig || {}, {
 	}
 });
 
+let rpc = 0;
+
 /**
  * @param {any[]} arr
  * @param {number} size
@@ -41,18 +43,16 @@ function loadImage({ element, isComplete }) {
  * @param {string} selector
  * @returns Set<pygmyImage>
  */
-function queueElements(selector) {
-	const elements = [...document.body.querySelectorAll(selector)].map((/** @type {HTMLImageElement} - element */ element) => ({ isComplete: element.complete || false, element }));
+function queueImages(selector) {
+	const elements = [...document.body.querySelectorAll(selector)].map((/** @type {HTMLImageElement} - element */ element) => ({ rpc: ++rpc, isComplete: element.complete || false, element }));
 
 	// add delegated listener to window
-
-	// check if image is complete
 
 	return new Set(elements);
 }
 
 function pygmySizesCore() {
-	const elements = queueElements(config.selector);
+	const elements = queueImages(config.selector);
 
 	if ('loading' in HTMLImageElement.prototype) {
 		elements.forEach(raf(loadImage));
