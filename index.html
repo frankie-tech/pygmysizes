@@ -10,18 +10,21 @@
 				display: flex;
 				flex-wrap: wrap;
 			}
-			[data-observer-entry] {
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				position: relative;
+			[data-pygmy] {
+				border: 1px solid transparent;
+				transition: border-color 0.5s ease-out;
 			}
-			[data-observer-entry='intersecting']::after {
-				content: 'intersecting';
+			/* fade image in after load */
+			[data-pygmy],
+			[data-pygmy-loading] {
+				opacity: 0;
 			}
-			.pygmy {
-				height: 500px;
-				width: 500px;
+			[data-pygmy-loaded] {
+				opacity: 1;
+				transition: opacity 300ms;
+			}
+			.loading {
+				border-color: red;
 			}
 		</style>
 		<script>
@@ -33,15 +36,15 @@
 	<body>
 		<main id="app"></main>
 		<script>
-			window.imagesLoaded = 0;
 			const app = document.getElementById('app');
 			const frag = document.createDocumentFragment();
 			// var loading = 'eager';
-			for (let i = 0; i < 50; i += 1) {
+			for (let i = 1; i < 51; i += 1) {
 				const img = document.createElement('img');
 
 				// img.loading = 'lazy';
-
+				img.src =
+					'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
 				img.dataset.pygmyset = `https://placehold.it/150/?text=srcset+${i}`;
 				img.dataset.pygmy = `https://placehold.it/150/?text=${i}`;
 
@@ -54,6 +57,5 @@
 			app.appendChild(frag);
 		</script>
 		<script src="./dist/index.umd.js"></script>
-		<script></script>
 	</body>
 </html>
