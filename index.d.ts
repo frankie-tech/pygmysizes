@@ -2,7 +2,7 @@
 type pygmyImage = {
 	rpc: number;
 	isComplete: boolean;
-	element: HTMLImageElement;
+	__element: HTMLImageElement;
 }
 
 /*
@@ -25,6 +25,7 @@ type pygmyConfig = {
 	srcset: string;
 	sizes: string;
 	preload: string;
+	rpc: number;
 	observer: {
 		rootMargin: string;
 		threshold: number;
