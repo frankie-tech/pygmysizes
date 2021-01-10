@@ -11,8 +11,9 @@ const config = Object.assign({
 	srcset: 'pygmyset',
 	sizes: 'pygmysizes',
 	preload: 'pygmyload',
+	rpc: 'pygmyrpc',
+	init: true,
 	options: {
-		rootMargin: '0px',
 		threshold: 0,
 	},
 }, window.pygmyConfig || {});
@@ -20,103 +21,95 @@ const config = Object.assign({
 let rpc = 0;
 
 const elementMap = new Map;
-const preloadElementSet = new Set;
-const observer = new IntersectionObserver(handleObservation, config.options)
-
-let isComplete = false,
-	isLoading = 0;
+const preloadElementMap = new Map;
+const observer = new IntersectionObserver(handleObservation, config.options);
 
 /**
  * @param {string} evtName
  * @param {pygmyImage} image
  */
-const dispatch = (evtName, image) => { image.element.dispatchEvent(new CustomEvent(evtName, { detail: image })) };
+const dispatch = (evtName, image) => { image.__element.dispatchEvent(new CustomEvent(evtName, { detail: image })) };
+
+/** @param {(0|1|2|3)} key */
+const state = key => 'pygmy' + ['Loading', 'Loaded', 'Error', 'PreLoaded'][key];
 
 /**
- * @param {any[]} arr
- * @param {number} size
- * @returns {any[][]}
+ * @param {pygmyImage} img 
+ * @param {(0|1|2|3)} to 
+ * @param {(0|1|2|3)} [from]
  */
-const chunk = (arr, size) => arr.reduce((acc, e, i) => (i % size ? acc[acc.length - 1].push(e) : acc.push([e]), acc), []);
+const changeState = (img, to, from) => { img.__element.dataset[state(to)] = 'true'; from && delete img.__element.dataset[state[from]] };
 
-// @ts-ignore
-const raf = fn => (...a) => {
-	requestAnimationFrame(() => { fn(...a) })
-},
-	// @ts-ignore
-	ric = requestIdleCallback || ((cb, start = Date.now()) => setTimeout(_ => cb({ didTimeout: false, timeRemaining: _ => Math.max(0, 50 - (Date.now() - start)) }), 1));
 /**
- * @param {HTMLElement} element
- * @param  {...string} attrs 
+ * @param {HTMLElement} el 
+ * @param {string} attr 
+ * @param {string} val
  */
-const setAttr = (element, ...attrs) => { chunk(attrs, 2).reduce((_, curr, i) => [i === 1 ? (element.setAttribute(_[0], _[1]), element.setAttribute(curr[0], curr[1])) : element.setAttribute(curr[0], curr[1])]) };
-
-
-const loadImage = raf(/**  @param {HTMLImageElement} element */ element => {
-	setAttr(element,
-		'src', element.dataset[config.src],
-		'srcset', element.dataset[config.srcset] || '',
-		'sizes', element.dataset[config.sizes] || ''
-	);
-});
+const sA = (el, attr, val) => { el.setAttribute(attr, val) };
 
 /** @param {HTMLImageElement} element */
-function queueImage(element) {
-	const elementOptions = { rpc: ++rpc, isComplete: element.complete || false, element }
-	element.dataset.pygmyRpc = '' + rpc;
+const queueImage = element => {
+	const elementOptions = { rpc: ++rpc, isComplete: element.complete || false, __element: element }
+	// @ts-ignore
+	element.dataset[config.rpc] = rpc;
 
-	if (element.dataset[config.preload]) preloadElementSet.add(element)
+	if (element.dataset[config.preload]) preloadElementMap.set(element, elementOptions);
 	elementMap.set(element, elementOptions);
+
 	observer.observe(element);
 	element.addEventListener('load', load);
 }
 
 /** @param {ProgressEvent} event */
-function load(event) {
+const load = event => {
 	const pygmyImage = elementMap.get(event.target);
-	pygmyImage.element.removeEventListener('load', load);
-	observer.unobserve(pygmyImage.element);
+	if (!pygmyImage) return;
+	pygmyImage.__element.removeEventListener('load', load);
+	observer.unobserve(pygmyImage.__element);
 
 	dispatch('pygmysizes:loaded', pygmyImage);
+	changeState(pygmyImage, 1, 0)
 }
 
-function unveil(element) {
-	isLoading++;
-	console.log(element);
+/** @param {pygmyImage} pygmyImage */
+const unveil = pygmyImage => {
+	let el = pygmyImage.__element;
+	let dataset = el.dataset;
+
+	changeState(pygmyImage, 0);
+	sA(el, 'src', dataset[config.src]);
+	sA(el, 'srcset', dataset[config.srcset]);
+	sA(el, 'sizes', dataset[config.sizes]);
 }
 
-/**
- * @param {IntersectionObserverEntry[]} inViewEntries
- * @param {IntersectionObserver} observer
- */
-function handleObservation(inViewEntries, observer) {
-	let i = 0,
-		l = inViewEntries.length;
+/** @param {IntersectionObserverEntry[]} inViewEntries */
+function handleObservation(inViewEntries) {
+	let l = inViewEntries.length
+	for (; l--;) {
+		let entry = inViewEntries[l];
+		if (!entry.isIntersecting) continue;
 
-	for (; i < l; i++) {
-		if (!inViewEntries[i].isIntersecting) continue;
-
-		unveil(inViewEntries[i].target);
+		let image = elementMap.get(entry.target);
+		if (!image) continue;
+		// @ts-ignore
+		dispatch('pygmysizes:beforeunveil', image)
+		unveil(image);
 	}
 }
 
 function pygmySizesCore() {
 	document.querySelectorAll(config.selector).forEach(queueImage);
 
-	if (preloadElementSet.size > 0) window.addEventListener('DOMContentLoaded', () => {
-		preloadElementSet.forEach(loadImage)
-	}, { once: true, capture: true });
-
-	// uncomment next line to test
-	delete HTMLImageElement.prototype.loading;
-
-	if ('loading' in HTMLImageElement.prototype) {
-		elementMap.forEach(loadImage);
-		return {
-			config,
-			elements: elementMap,
-		}
-	}
+	if (preloadElementMap.size > 0)
+		document.addEventListener('pageshow', _ => {
+			preloadElementMap.forEach((img) => {
+				changeState(img, 3);
+				unveil(img)
+			})
+		}, { once: true });
 }
 
-export default pygmySizes = pygmySizesCore();;
+setTimeout(() => { config.init && pygmySizesCore() }, 0);
+
+
+export default pygmySizesCore
