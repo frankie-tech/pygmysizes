@@ -45,7 +45,7 @@ const changeState = (img, to, from) => { img.__element.dataset[state(to)] = 'tru
  * @param {string} attr 
  * @param {string} val
  */
-const sA = (el, attr, val) => { el.setAttribute(attr, val) };
+const sA = (el, attr, val) => { el.setAttribute(attr, val || '') };
 
 /** @param {HTMLImageElement} element */
 const queueImage = element => {
@@ -53,7 +53,7 @@ const queueImage = element => {
 	// @ts-ignore
 	element.dataset[config.rpc] = rpc;
 
-	if (element.dataset[config.preload]) preloadElementMap.set(element, elementOptions);
+	if (element.dataset[config.preload] !== undefined) preloadElementMap.set(element, elementOptions);
 	elementMap.set(element, elementOptions);
 
 	observer.observe(element);
@@ -101,12 +101,10 @@ function pygmySizesCore() {
 	document.querySelectorAll(config.selector).forEach(queueImage);
 
 	if (preloadElementMap.size > 0)
-		document.addEventListener('pageshow', _ => {
-			preloadElementMap.forEach((img) => {
-				changeState(img, 3);
-				unveil(img)
-			})
-		}, { once: true });
+		preloadElementMap.forEach((img) => {
+			changeState(img, 3);
+			unveil(img)
+		});
 }
 
 setTimeout(() => { config.init && pygmySizesCore() }, 0);
