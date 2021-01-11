@@ -28,17 +28,17 @@ To change the defaults alter these values on the `window.pygmyConfig` object bef
 
 ```json
 {
-  selector: '[loading="lazy"]',
-  src: 'pygmy',
-  srcset: 'pygmyset',
-  sizes: 'pygmysizes',
-  preload: 'pygmyload',
-  rpc: 'pygmyrpc',
-  options: {
-    // IntersectionObserver options
-  }
+  "selector": "[loading='lazy']",
+  "src": "pygmy",
+  "srcset": "pygmyset",
+  "sizes": "pygmysizes",
+  "preload": "pygmyload",
+  "rpc": "pygmyrpc",
+  "options": {}
 }
 ```
+
+`window.pygmyConfig.options` _is for IntersectionObserver options_
 
 ## FAQ
 
