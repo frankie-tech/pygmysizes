@@ -1,39 +1,80 @@
 # 🦥 pygmysizes 🦥
 
-A micro sized lazyloading image "library"
+A micro-library for lazyloading images
 
 ## Foreword
 
-pygmysizes (named after the pygmy sloth) is a lazySizes mimic that offers only the skeleton of features that lazySizes offers. The only core system passed on is the events and ability to create plugins. **Plugin is subject to change**
+pygmysizes (named after the pygmy sloth) is a lazysizes mimic that offers only the skeleton of features that lazysizes offers. The only core system passed on is the events.
 
-## Goals
+### Packages
 
--   self initializing
--   standards compliant
--   60fps/jank free
--   no impact to SEO
--   use modern code
--   size budget: ~1kb (ungzipped)
+_Sizes are gzipped_
 
-## Outline
+| ES5/UMD | ES2017/Modern |
+|---|---|
+| 1064b / 748b | 948b / 677b |
 
--   handle settings from a window config object
--   register all pygmy el using `loading="lazy"` making it a first class citizen
--   option to automatically add transparent gif hack
--   set up intersection observer
--   mimic class loading management of lazySizes to take advantage of some transition effects
+## Goals:
+
+-   Size budget: ~1kb
+- Be `[loading="lazy"]` first
+-   Use ✨ modern ✨ code
+-   Self initialize, but offer option to defer
+- Offer similar events to lazysizes
+
+## Settings:
+
+To change the defaults alter these values on the `window.pygmyConfig` object before the script loads.
+
+```json
+{
+  selector: '[loading="lazy"]',
+  src: 'pygmy',
+  srcset: 'pygmyset',
+  sizes: 'pygmysizes',
+  preload: 'pygmyload',
+  rpc: 'pygmyrpc',
+  options: {
+    // IntersectionObserver options
+  }
+}
+```
+
+## FAQ
+
+### __Wait doesn't lazysizes have more settings than that?__
+
+Yeah, these are the ones I've used most often, and implemented them here. Due to the size constraint I've budgeted, I'm not planning on adding anything else to the package.
+
+### __But what about...?__
+
+If something can be proposed that doesn't exceed the current size budget (~1kb), I'm all for adding it.
+
+### __What about expand?__
+
+Feature like expand and `sizes="auto"`, where Javascript is used to calculate values automatically will likely not be added.
+
+### __So no loadMode?__
+
+That is actually on my todo list! But with pygmysizes already _technically_ overbudget, I don't know if I will be able to.
 
 ## API Outline
 
-`data-pygmy`: link to the image file
+### __While pygmysizes is a mimic, the attributes are slightly different, to avoid conflict__
 
-`data-pygmyset`: valid srcset string
+- `data-src` is replaced by `data-pygmy`
 
-`data-pygmyload`: empty attribute will preload image after `pageshow` event.
+- `data-srcset` is replaced by `data-pygmyset`
 
-On init: pygmysizes will register each img/element with `data-pygmy` if it is not in viewport.
+- `data-sizes` is replaced by `data-pgymysizes`
 
-If an element is in viewport it will immediately begin loading, adding `data-pygmy-loading` until finished.
+- `.lazypreload` is replaced by `data-pygmyload`
 
-Once loaded, `data-pygmy-loading` will be removed and replaced by `data-pygmy-loaded`.
-Then the intersection observer for this element will be unsubscribed.
+### __How do  I defer initializing?__
+
+Before pygmysizes loads set `window.pygmyConfig.init` to `false`, and then when you're ready run pygmySizes() __Confirm this__
+
+
+## __Does pygmysizes have any classes__
+
+No. Instead of classes, pygmysizes works entirely using `data-*`. A loaded image will have `data-pygmyloaded`, and a loading image will have `data-pygmyloading`. I have plans to make this configurable, but for now it is only the `src`, `srcset`, and `sizes` data attributes are configurable.
