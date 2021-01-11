@@ -61,7 +61,7 @@ const queueImage = element => {
 	element.addEventListener('load', load);
 }
 
-/** @param {ProgressEvent} event */
+/** @param {Event} event */
 const load = event => {
 	const pygmyImage = elementMap.get(event.target);
 	if (!pygmyImage) return;
@@ -99,6 +99,7 @@ function handleObservation(inViewEntries) {
 }
 
 function pygmySizesCore() {
+	// @ts-ignore
 	document.querySelectorAll(config.selector).forEach(queueImage);
 
 	if (preloadElementMap.size > 0)
