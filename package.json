@@ -10,7 +10,7 @@
 		"watch": "microbundle watch src/index.js -f=modern,umd --name=pygmysizes --no-compress",
 		"build:min": "microbundle src/index.js -f=modern,umd --name=pygmysizes",
 		"build:main": "microbundle src/index.js -f=modern,umd --name=pygmysizes --no-compress",
-		"bundle": "npm-run-all clean build:*"
+		"bundle": "npm-run-all clean build:min"
 	},
 	"author": "frankie-tech",
 	"license": "MIT",
