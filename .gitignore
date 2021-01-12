@@ -1,5 +1,5 @@
 node_modules
-dist/*.map
+dist
 
 pnpm-debug.log
 package-lock.json

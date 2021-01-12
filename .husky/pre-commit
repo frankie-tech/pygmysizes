@@ -1,0 +1,1 @@
+run-s clean build:min
