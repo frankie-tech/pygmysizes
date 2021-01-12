@@ -1,1 +1,1 @@
-run-s clean build:min
+npm-run-all clean build:min
