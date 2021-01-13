@@ -8,10 +8,7 @@
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"clean": "rm -rf dist/",
 		"watch": "microbundle watch src/index.js -f=modern,umd --name=pygmysizes --no-compress",
-		"build": "microbundle src/index.js -f=modern,umd --name=pygmysizes",
-		"build:min": "microbundle src/index.js -f=modern,umd --name=pygmysizes",
-		"build:main": "microbundle src/index.js -f=modern,umd --name=pygmysizes --no-compress",
-		"bundle": "npm-run-all clean build:min"
+		"build:min": "microbundle src/index.js -f=modern,umd --name=pygmysizes"
 	},
 	"author": "frankie-tech",
 	"license": "MIT",
@@ -22,8 +19,7 @@
 	},
 	"husky": {
 		"hooks": {
-			"pre-commit": "npm run bundle"
+			"pre-commit": "npx npm-run-all clean build:min"
 		}
-	},
-	"dependencies": {}
+	}
 }
