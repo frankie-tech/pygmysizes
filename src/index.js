@@ -16,9 +16,7 @@ const config = Object.assign({
 	preload: 'pygmyload',
 	rpc: 'pygmyrpc',
 	init: true,
-	options: {
-		threshold: 0,
-	},
+	options: { threshold: 0, },
 }, window.pygmyConfig || {});
 
 let rpc = 0;
