@@ -5,6 +5,8 @@
  * @typedef {import('..').pygmyConfig} pygmyConfig
  */
 
+
+
 /** @type {pygmyConfig}  */
 const config = Object.assign({
 	selector: '[loading="lazy"]',
