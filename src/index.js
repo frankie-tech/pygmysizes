@@ -12,12 +12,9 @@ const config = Object.assign({
 	srcset: 'pygmyset',
 	sizes: 'pygmysizes',
 	preload: 'pygmyload',
-	rpc: 'pygmyrpc',
 	init: true,
 	options: { threshold: 0, },
 }, window.pygmyConfig || {});
-
-let rpc = 0;
 
 const elementMap = new Map;
 const preloadElementMap = new Map;
@@ -48,9 +45,7 @@ const sA = (el, attr, val) => { el.setAttribute(attr, val || '') };
 
 /** @param {HTMLImageElement} element */
 const queueImage = element => {
-	const elementOptions = { rpc: ++rpc, isComplete: element.complete || false, __element: element }
-	// @ts-ignore
-	element.dataset[config.rpc] = rpc;
+	const elementOptions = { isComplete: element.complete || false, __element: element }
 
 	if (element.dataset[config.preload] !== undefined) preloadElementMap.set(element, elementOptions);
 	elementMap.set(element, elementOptions);

@@ -11,7 +11,6 @@ type pygmyConfig = {
 	srcset: string;
 	sizes: string;
 	preload: string;
-	rpc: string;
 	init?: boolean;
 	options?: {
 		root?: Element;
