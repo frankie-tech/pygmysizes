@@ -6,7 +6,7 @@
  */
 
 /** @type {pygmyConfig}  */
-const config = Object.assign({
+let config = Object.assign({
 	selector: '[loading="lazy"]',
 	src: 'pygmy',
 	srcset: 'pygmyset',
@@ -14,95 +14,95 @@ const config = Object.assign({
 	preload: 'pygmyload',
 	init: true,
 	options: { threshold: 0, },
-}, window.pygmyConfig || {});
+	// @ts-ignore
+}, self.pygmyConfig || {});
+let data = 'dataset';
+let elementMap = new Map;
+let preloadElementMap = new Map;
 
-const elementMap = new Map;
-const preloadElementMap = new Map;
-const observer = new IntersectionObserver(handleObservation, config.options);
+let observer = new IntersectionObserver(
+/** @param {IntersectionObserverEntry[]} inViewEntries */(inViewEntries) => {
+		for (let l = inViewEntries.length, entry, image; l--;) {
+			if (!(entry = inViewEntries[l]).isIntersecting) continue;
+			if ((image = elementMap.get(entry.target))) unveil(image._el, config);
+		}
+	}, config.options);
 
 /**
- * @param {string} evtName
- * @param {pygmyImage} image
- */
-const dispatch = (evtName, image) => { image.__element.dispatchEvent(new CustomEvent(evtName, { detail: image })) };
-
-/** @param {(0|1|2|3)} key */
-const state = key => 'pygmy' + ['Loading', 'Loaded', 'Error', 'PreLoaded'][key];
-
-/**
- * @param {pygmyImage} img 
+ * @param {HTMLElement} el 
  * @param {(0|1|2|3)} to 
- * @param {(0|1|2|3)} [from]
+ * @param {(0|1|2|3)} from 
+ * @param {string} [t]
  */
-const changeState = (img, to, from) => { img.__element.dataset[state(to)] = 'true'; from && delete img.__element.dataset[state[from]] };
+let set = (el, to, from, t) => {
+	/** @param {(0|1|2|3)} key */
+	let state = key => 'pygmy' + ['Loading', 'Loaded', 'Error', 'Preloaded'][key];
+	el.dispatchEvent(new CustomEvent(t = state(to)));
+	el[data][t] = 'true';
+	if (from !== to) delete el[data][state(from)];
+}
 
 /**
  * @param {HTMLElement} el 
  * @param {string} attr 
- * @param {string} val
+ * @param {string} [val]
  */
-const sA = (el, attr, val) => { el.setAttribute(attr, val || '') };
+let sA = (el, attr, val = '') => { el.setAttribute(attr, val) };
 
-/** @param {HTMLImageElement} element */
-const queueImage = element => {
-	const elementOptions = { isComplete: element.complete || false, __element: element }
+/**
+ * @param {HTMLImageElement} element
+ * @param {object} [details]
+ */
+let queueImage = (element, details) => {
+	details = {
+		isComplete: element.complete || false,
+		_el: element
+	}
 
-	if (element.dataset[config.preload] !== undefined) preloadElementMap.set(element, elementOptions);
-	elementMap.set(element, elementOptions);
+	if (config.preload in element[data]) preloadElementMap.set(element, details);
+	elementMap.set(element, details);
 
 	observer.observe(element);
-	element.addEventListener('load', load);
+	element.onload = load;
 }
 
-/** @param {Event} event */
-const load = event => {
-	const pygmyImage = elementMap.get(event.target);
-	if (!pygmyImage) return;
-	pygmyImage.__element.removeEventListener('load', load);
-	observer.unobserve(pygmyImage.__element);
+/** @param {Event} e */
+let load = e => {
+	let _el = elementMap.get(e.target)._el;
+	_el.removeEventListener('load', load);
+	observer.unobserve(_el);
 
-	dispatch('pygmysizes:loaded', pygmyImage);
-	changeState(pygmyImage, 1, 0)
+	set(_el, 1, 0);
+}
+/** @param {pygmyImage} img */
+let preload = img => {
+	let _el = img._el;
+	sA(_el, 'loading', 'eager');
+	set(_el, 3, 0);
+	unveil(_el, config)
 }
 
-/** @param {pygmyImage} pygmyImage */
-const unveil = pygmyImage => {
-	let el = pygmyImage.__element;
-	let dataset = el.dataset;
-
-	changeState(pygmyImage, 0);
-	sA(el, 'src', dataset[config.src]);
-	sA(el, 'srcset', dataset[config.srcset]);
-	sA(el, 'sizes', dataset[config.sizes]);
+/**
+ * @param {HTMLElement} _el
+ * @param {pygmyConfig} pygmyConfig
+ */
+let unveil = (_el, pygmyConfig) => {
+	set(_el, 0, 0);
+	sA(_el, 'src', _el[data][pygmyConfig.src]);
+	sA(_el, 'srcset', _el[data][pygmyConfig.srcset]);
+	sA(_el, 'sizes', _el[data][pygmyConfig.sizes]);
 }
 
-/** @param {IntersectionObserverEntry[]} inViewEntries */
-function handleObservation(inViewEntries) {
-	let l = inViewEntries.length
-	for (; l--;) {
-		let entry = inViewEntries[l];
-		if (!entry.isIntersecting) continue;
-
-		let image = elementMap.get(entry.target);
-		if (!image) continue;
-		// @ts-ignore
-		dispatch('pygmysizes:beforeunveil', image)
-		unveil(image);
-	}
-}
-
-function pygmySizesCore() {
+/** @param {pygmyConfig} pygmyConfig */
+let pygmySizesCore = pygmyConfig => {
 	// @ts-ignore
-	document.querySelectorAll(config.selector).forEach(queueImage);
+	document.querySelectorAll(pygmyConfig.selector).forEach(queueImage);
 
-	if (preloadElementMap.size > 0)
-		preloadElementMap.forEach((img) => {
-			changeState(img, 3);
-			unveil(img)
-		});
+	preloadElementMap.size > 0 &&
+		preloadElementMap.forEach(preload);
 }
 
-setTimeout(() => { config.init && pygmySizesCore() }, 0);
+setTimeout(config => { config.init && pygmySizesCore(config) }, 0, config);
 
 
 export default pygmySizesCore

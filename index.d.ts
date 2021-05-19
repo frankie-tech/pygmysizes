@@ -1,8 +1,7 @@
 /** Image */
 type pygmyImage = {
-	rpc: number;
 	isComplete: boolean;
-	__element: HTMLImageElement;
+	_el: HTMLImageElement;
 }
 
 type pygmyConfig = {
