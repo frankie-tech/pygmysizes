@@ -41,14 +41,7 @@ let set = (el, to, from, t) => {
 	el[data][t] = 'true';
 	if (from !== to) delete el[data][state(from)];
 }
-
-/**
- * @param {HTMLElement} el 
- * @param {string} attr 
- * @param {string} [val]
- */
-let sA = (el, attr, val = '') => { el.setAttribute(attr, val) };
-
+ 
 /**
  * @param {HTMLImageElement} element
  * @param {object} [details]
@@ -77,7 +70,7 @@ let load = e => {
 /** @param {pygmyImage} img */
 let preload = img => {
 	let _el = img._el;
-	sA(_el, 'loading', 'eager');
+	_el.loading = 'eager';
 	set(_el, 3, 0);
 	unveil(_el, config)
 }
@@ -88,9 +81,9 @@ let preload = img => {
  */
 let unveil = (_el, pygmyConfig) => {
 	set(_el, 0, 0);
-	sA(_el, 'src', _el[data][pygmyConfig.src]);
-	sA(_el, 'srcset', _el[data][pygmyConfig.srcset]);
-	sA(_el, 'sizes', _el[data][pygmyConfig.sizes]);
+	_el.src = _el[data][pygmyConfig.src];
+	_el.src = _el[data][pygmyConfig.srcset];
+	_el.sizes = _el[data][pygmyConfig.sizes];
 }
 
 /** @param {pygmyConfig} pygmyConfig */
