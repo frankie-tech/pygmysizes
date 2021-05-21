@@ -22,9 +22,9 @@ let preloadElementMap = new Map;
 
 let observer = new IntersectionObserver(
 /** @param {IntersectionObserverEntry[]} inViewEntries */(inViewEntries) => {
-		for (let l = inViewEntries.length, entry, image; l--;) {
+		for (let l = inViewEntries.length, entry, _el; l--;) {
 			if (!(entry = inViewEntries[l]).isIntersecting) continue;
-			if ((image = elementMap.get(entry.target))) unveil(image._el, config);
+			if ((_el = elementMap.get(entry.target))) unveil(_el, config);
 		}
 	}, config.options);
 
@@ -37,32 +37,26 @@ let observer = new IntersectionObserver(
 let set = (el, to, from, t) => {
 	/** @param {(0|1|2|3)} key */
 	let state = key => 'pygmy' + ['Loading', 'Loaded', 'Error', 'Preloaded'][key];
-	el.dispatchEvent(new CustomEvent(t = state(to)));
-	el[data][t] = 'true';
+	el[data][t] = el.dispatchEvent(new CustomEvent(t = state(to)))
 	if (from !== to) delete el[data][state(from)];
 }
- 
+
 /**
- * @param {HTMLImageElement} element
- * @param {object} [details]
+ * @param {HTMLImageElement} _el
  */
-let queueImage = (element, details) => {
-	details = {
-		isComplete: element.complete || false,
-		_el: element
-	}
+let queueImage = (_el) => {
+	elementMap.set(_el, { _el });
+	config.preload in _el[data] && preloadElementMap.set(_el, { _el, preload: true })
 
-	if (config.preload in element[data]) preloadElementMap.set(element, details);
-	elementMap.set(element, details);
-
-	observer.observe(element);
-	element.onload = load;
+	observer.observe(_el);
+	_el.onload = load;
 }
 
 /** @param {Event} e */
 let load = e => {
 	let _el = elementMap.get(e.target)._el;
 	_el.removeEventListener('load', load);
+
 	observer.unobserve(_el);
 
 	set(_el, 1, 0);
@@ -75,15 +69,17 @@ let preload = img => {
 	unveil(_el, config)
 }
 
+// let sA = (el,)
+
 /**
- * @param {HTMLElement} _el
+ * @param {HTMLImageElement} _el
  * @param {pygmyConfig} pygmyConfig
  */
 let unveil = (_el, pygmyConfig) => {
-	set(_el, 0, 0);
 	_el.src = _el[data][pygmyConfig.src];
-	_el.src = _el[data][pygmyConfig.srcset];
-	_el.sizes = _el[data][pygmyConfig.sizes];
+	_el.sizes = _el[data][pygmyConfig.sizes] || '';
+	_el.srcset = _el[data][pygmyConfig.srcset] || '';
+	set(_el, 0, 0);
 }
 
 /** @param {pygmyConfig} pygmyConfig */
@@ -91,7 +87,7 @@ let pygmySizesCore = pygmyConfig => {
 	// @ts-ignore
 	document.querySelectorAll(pygmyConfig.selector).forEach(queueImage);
 
-	preloadElementMap.size > 0 &&
+	preloadElementMap.size &&
 		preloadElementMap.forEach(preload);
 }
 

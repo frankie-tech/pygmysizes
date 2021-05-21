@@ -7,7 +7,7 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"clean": "rm -rf dist/",
-		"watch": "microbundle watch src/index.js -f=modern,umd --name=pygmysizes --no-compress",
+		"watch": "microbundle watch src/index.js -f=modern,umd --name=pygmysizes --no-source-map",
 		"build:min": "microbundle src/index.js -f=modern,umd --name=pygmysizes",
 		"prepare": "husky install"
 	},
