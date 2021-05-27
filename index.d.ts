@@ -1,6 +1,6 @@
 /** Image */
 type pygmyImage = {
-	isComplete?: boolean;
+	done?: boolean;
 	preload: boolean;
 	_el: HTMLImageElement;
 }
