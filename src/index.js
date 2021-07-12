@@ -24,24 +24,23 @@ let observer = new IntersectionObserver(
 		for (let l = inViewEntries.length, e; l--;)
 			(e = inViewEntries[l]).isIntersecting
 				// @ts-ignore
-				&& unveil(elementMap.get(e.target), e.target)
+				&& raf(_ => { unveil(elementMap.get(e.target), e.target) })
 	}, options);
 
 /**
- * @param {pygmyImage} pygmy
- * @param {HTMLImageElement} _el
- * @param {(0|1|2|3)} to 
- * @param {(0|1|2|3)} [from]
- * @param {string} [t]
- * @param {(k:(0|1|2|3)) => string} [state]
+ * @param {pygmyImage} pygmy 
+ * @param {HTMLImageElement} _el 
+ * @param {(0|1|2)} [i]
+ * @param {string} [e]
  */
-let set = (pygmy, _el, to, from, t, state) => {
-	/** @param {(0|1|2|3)} key */
-	state = key => 'pygmy' + ['Before', 'Load', 'Preload'][key];
-	if (from !== to) delete _el.dataset[state(from || 0)];
-	// @ts-ignore
-	_el.dataset[t = state(to)] = _el.dispatchEvent(new CustomEvent(t, { detail: pygmy }));
+let set = (pygmy, _el, i = 0, e) => {
+	e = _el.dataset.pygmyState = ['before', 'load', 'preload'][i];
+	// This setting the variable inside of the parameter is gross but it saved it saved like 23b in the umd br
+	_el.dispatchEvent(new CustomEvent('pygmy:' + e, {
+		detail: pygmy
+	}))
 }
+
 
 /**
  * @param {HTMLImageElement} _el
@@ -95,14 +94,17 @@ let loadPygmy = (e, pygmy, _el) => {
  * @param {pygmyImage} pygmy
  * @param {HTMLImageElement} _el
  */
-let unveil = (pygmy, _el) => raf(_ => set(pygmy, _el, 0),
-	// @ts-ignore tsc doesn't like the commas and thinks that these are extra arguments
-	_el.src = _el.dataset[src], _el.srcset = _el.dataset[srcset] || '')
+let unveil = (pygmy, _el) => {
+	set(pygmy, _el, 0),
+		// @ts-ignore tsc doesn't like the commas and thinks that these are extra arguments
+		_el.src = _el.dataset[src], _el.srcset = _el.dataset[srcset] || ''
+}
 
 /** @param {number} _ */
-let pygmySizes = _ =>
+let pygmySizes = _ => {
 	// @ts-ignore
 	document.querySelectorAll(sel).forEach(queueImage);
+}
 
 init && raf(pygmySizes);
 
